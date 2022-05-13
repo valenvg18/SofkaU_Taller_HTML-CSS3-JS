@@ -24,7 +24,7 @@ img {
     
 }
 
-.contenedor_nombre {
+.TituloPrincipal {
     text-align: center;
     border: 2px solid rgb(249, 230, 157);
     border-radius:22px;
@@ -34,6 +34,16 @@ img {
     box-shadow: 0px 0px 20px white inset, 0px 0px 20px rgb(250, 138, 192);
 }
 
+.TitulosNavegacion {
+    text-align: center;
+    border: 2px solid rgb(249, 230, 157);
+    border-radius:22px;
+    text-shadow: 5px 5px 3px rgb(179, 177, 177);
+    max-width:1024px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px white inset, 0px 0px 20px rgb(250, 138, 192);
+}
 
 #Contenedor_DatosPersonales {
     border:3px solid rgb(255, 237, 164);
@@ -97,14 +107,15 @@ hr {
     margin-bottom: 50px
 }
 
-#Contenedor_descarga {
+.Contenedor_descarga {
     border:1px dotted rgb(162, 156, 160);
     border-radius:22px;
     background-color:rgb(245, 232, 191);
     padding:10px;
     margin-left:20px;
-    margin-right:1054px;
+    margin-right:1045px;
     box-shadow: 2px 2px 3px rgb(255, 255, 255);
+    text-align: center;
 }
 
 a{
@@ -116,7 +127,44 @@ a:hover {
     color:papayawhip;
 }
 
+.cajaInformacion {
+    border:2px solid rgb(249, 230, 157);
+    border-radius:22px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 1024px;
+    text-align: center;
+    box-shadow: 0px 0px 40px rgb(249, 230, 157);
+}
 
+#opciones {
+    border:1px solid rgb(249, 230, 157);
+    border-radius: 22px;
+    background-color: beige;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    list-style: none;
+}
+
+h2 {
+    color: rgb(250, 138, 192);
+}
+
+#Contenedor_volverAtras {
+    border:1px dotted rgb(162, 156, 160);
+    border-radius:22px;
+    background-color:white;
+    margin-left:20px;
+    margin-right:1200px;
+    box-shadow: 2px 2px 3px rgb(255, 255, 255);
+    text-align: center;
+}
 
 
 /* <hr size="2"> */

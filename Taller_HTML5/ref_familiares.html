@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referencia Familiares</title>
     <link rel="stylesheet" href="CSS/estilos.css" type="text/css" />
+    <script src="JS/Acordeon.js"></script>
+    <script src="JS/Archivo.js"></script>
 </head>
-<body >
+<body onload="main()" id="body">
     <header>
+        <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+            <option value="">Seleccionar Fondo</option>
+            <option value="url('Img/FMDorado.jpeg')">Dorado</option>
+            <option value="url('Img/fondoMarmolRojo.webp')">Rojo</option>
+            <option value="url('Img/fondoMarmolAzul.jpeg')">Azul</option>
+          
+        </select>
         <div class="TitulosNavegacion">
             <h1> Referencias Familiares </h1>
         </div>
@@ -17,21 +26,24 @@
     <section>
         <div class="cajaInformacion">
             <article>
-                <div id="opciones"><p> 
-                    <b>Nombre:</b> Paula Andrea Granados<br>
-                    <b>Cel:</b> 3103896047<br>
-                    <b>Email:</b> paulagra8@gmail.com
-                </p> </div>
-                <div id="opciones"><p> 
-                    <b>Nombre:</b> Alexander Villa Jaramillo<br>
-                    <b>Cel:</b> 3135037531<br>
-                    <b>Email:</b> alexvillaj@gmail.com
-                </p></div>
-                <div id="opciones"><p> 
-                    <b>Nombre:</b> Laura Castaño Granados<br>
-                    <b>Cel:</b> 3213128170<br>
-                    <b>Email:</b> laura_castanog@gmail.com
-                </p></div>  
+                <button class="acordeon"><h2> Referencia Familiar 1 </h2></button>
+                    <div class="informacion"><p> 
+                        <b>Nombre:</b> Paula Andrea Granados<br>
+                        <b>Cel:</b> 3103896047<br>
+                        <b>Email:</b> paulagra8@gmail.com
+                    </p> </div>
+                <button class="acordeon"><h2> Referencia Familiar 2 </h2></button>
+                    <div class="informacion"><p> 
+                        <b>Nombre:</b> Alexander Villa Jaramillo<br>
+                        <b>Cel:</b> 3135037531<br>
+                        <b>Email:</b> alexvillaj@gmail.com
+                    </p></div>
+                <button class="acordeon"><h2> Referencia Familiar 3 </h2></button>
+                    <div class="informacion"><p> 
+                        <b>Nombre:</b> Laura Castaño Granados<br>
+                        <b>Cel:</b> 3213128170<br>
+                        <b>Email:</b> laura_castanog@gmail.com
+                    </p></div>  
 
             </article>
         </div>

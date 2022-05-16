@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referencias Personales</title>
-    <link rel="stylesheet" href="CSS/estilos.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/estilos.css" type="text/css"/>
+    <script src="JS/Acordeon.js"></script>
+    <script src="JS/Archivo.js"></script>
 </head>
-<body>
+<body onload="main()" id="body">
     <header>
+        <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+            <option value="">Seleccionar Fondo</option>
+            <option value="url('Img/FMDorado.jpeg')">Dorado</option>
+            <option value="url('Img/fondoMarmolRojo.webp')">Rojo</option>
+            <option value="url('Img/fondoMarmolAzul.jpeg')">Azul</option>
+          
+        </select>
         <div class="TitulosNavegacion">
             <h1> Referencias Personales </h1>
         </div>
@@ -16,17 +25,20 @@
     <section>
         <div class="cajaInformacion">
             <article>
-                <div id="opciones"><p> 
+                <button class="acordeon"><h2> Referencia Personal 1 </h2></button>
+                <div class="informacion"><p> 
                     <b>Nombre:</b> Alejandro Restrepo Muñoz<br>
                     <b>Cel:</b> 3023221460<br>
                     <b>Email:</b> alejandrorpo0217@gmail.com
                 </p></div>
-                <div id="opciones"><p> 
+                <button class="acordeon"><h2> Referencia Personal 2 </h2></button>
+                <div class="informacion"><p> 
                     <b>Nombre:</b> Isabela Rubiano Ruiz<br>
                     <b>Cel:</b> 3113535551<br>
                     <b>Email:</b> isabelarruiz@gmail.com
                 </p></div>
-                <div id="opciones"><p> 
+                <button class="acordeon"><h2> Referencia Personal 3 </h2></button>
+                <div class="informacion"><p> 
                     <b>Nombre:</b> Valentina Jaramillo Valencia<br>
                     <b>Cel:</b> 3007465848<br>
                     <b>Email:</b> valentina.jaramillov@udea.edu.co

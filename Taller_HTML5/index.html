@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hoja de Vida</title>
     <link rel="stylesheet" href="CSS/estilos.css" type="text/css" />
+    <script src="JS/Archivo.js"></script>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div id="contenedor_foto">
         <img src="img/picture.jpeg" alt="foto"/> 
       </div> 
+
+      <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+        <option value="">Seleccionar Fondo</option>
+        <option value="url('Img/FMDorado.jpeg')">Dorado</option>
+        <option value="url('Img/fondoMarmolRojo.webp')">Rojo</option>
+        <option value="url('Img/fondoMarmolAzul.jpeg')">Azul</option>
+      </select>
+
       <div class="TituloPrincipal">
         <h1>VALENTINA VILLA GRANADOS</h1>
       </div>
+       
     </header>
 
     <section class="Informacion">
@@ -31,7 +41,7 @@
           
         </article>
       </div>
-      
+
       <div id="Contenedor_Perfil">
         <article>
           <h2>Perfil Profesional</h2>

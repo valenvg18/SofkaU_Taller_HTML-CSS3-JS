@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudios</title>
     <link rel="stylesheet" href="CSS/estilos.css" type="text/css" />
+    <script src="JS/Acordeon.js"></script>
+    <script src="JS/Archivo.js"></script>
 </head>
 
-<body>
+<body onload="main()" id="body">
     <header>
+        <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+            <option value="">Seleccionar Fondo</option>
+            <option value="url('Img/FMDorado.jpeg')">Dorado</option>
+            <option value="url('Img/fondoMarmolRojo.webp')">Rojo</option>
+            <option value="url('Img/fondoMarmolAzul.jpeg')">Azul</option>
+          
+        </select>
         <div class="TitulosNavegacion">
             <h1> Estudios Realizados </h1>
         </div>
@@ -18,16 +27,16 @@
     <section>
         <div class="cajaInformacion">
             <article>
-                <ul>
-                    <div id="opciones"><li><h3><i>Universidad de Antioquia</i></h3> 
+                <button class="acordeon"><h2> Estudios Universitarios </h2></button>
+                    <div class="informacion"><h3><i>Universidad de Antioquia</i></h3> 
                         <i> Ingeniería Ambiental </i><br>
                         2017 - 2020
-                    </li></div>
-                    <div id="opciones"><li><h3><i>Primaria y Bachillerato</i></h3>
+                    </div>
+                <button class="acordeon"><h2> Estudios Básicos </h2></button>
+                    <div class="informacion"><h3><i>Primaria y Bachillerato</i></h3>
                         <i> Colegio El Carmelo </i><br>
                         Promoción 2016
-                    </li></div>
-                </ul>
+                    </div>
             </article>
         </div>
     </section>

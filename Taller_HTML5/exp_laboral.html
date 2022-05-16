@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiencia Laboral</title>
     <link rel="stylesheet" href="CSS/estilos.css" type="text/css" />
+    <script src="JS/Acordeon.js"></script>
+    <script src="JS/Archivo.js"></script>
 </head>
-<body>
+<body onload="main ()" id="body">
     <header>
+        <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+            <option value="">Seleccionar Fondo</option>
+            <option value="url('Img/FMDorado.jpeg')">Dorado</option>
+            <option value="url('Img/fondoMarmolRojo.webp')">Rojo</option>
+            <option value="url('Img/fondoMarmolAzul.jpeg')">Azul</option>
+          
+        </select>
         <div class="TitulosNavegacion">
             <h1> Experiencia Laboral </h1>
         </div>
@@ -17,28 +26,37 @@
     <section>
         <div class="cajaInformacion">
             <article>
-                <ul>
-                    <div id="opciones"><li><h2> Asesora Comercial </h2>
-                        <b><i> D-PORTE S.A.S </i></b><br>
-                        Octubre 2018- Diciembre 2018<br>
-                        Asesora en venta de ropa, calzado y accesorios deportivos y ayudante en bodega
-                    </li> </div>
-                    <div id="opciones"><li><h2> Asesora Comercial </h2>
-                        <b><i> ADIDAS LTDA </i></b><br>
-                        Abril 2019 - Diciembre 2019<br>
-                        Asesora en venta de ropa, calzado y accesorios deportivos, auxiliar de logística, manejo de caja, elaboración y comunicación de reportes.
-                    </li></div>
-                    <div id="opciones"><li><h2> Operador de Telemarketing </h2>
+                
+                <button class="acordeon"><h2> Asesora Comercial </h2></button>
+                    <div class="informacion">
+                        <ul id="lista">
+                            <li id="opciones">
+                                <b><i> D-PORTE S.A.S </i></b><br>
+                                <i>Octubre 2018- Diciembre 2018</i><br>
+                                Asesora en venta de ropa, calzado y accesorios deportivos y ayudante en bodega
+                            </li>
+                            <li id="opciones">
+                                <b><i> ADIDAS LTDA </i></b><br>
+                                <i>Abril 2019 - Diciembre 2019</i><br>
+                                Asesora en venta de ropa, calzado y accesorios deportivos, auxiliar de logística, manejo de caja, elaboración y comunicación de reportes.
+                            </li>
+                        </ul>
+                        
+                    </div>
+                
+                <button class="acordeon"><h2> Operador de Telemarketing </h2></button>   
+                    <div class="informacion">
                         <b><i> DISI JEANS </i></b><br>
-                        Noviembre 2020 - Octubre 2021<br>
+                        <i>Noviembre 2020 - Octubre 2021</i><br>
                         Promotora y vendedora de productos de moda por medio telefónico y virtual, auxiliar de marketing digital, manejo de redes sociales, manejo de caja y elaboración de egresos contables.
-                    </li></div>
-                    <div id="opciones"><li><h2> QA Automation developer </h2>
+                    </div>
+                
+                <button class="acordeon"><h2> QA Automation developer </h2></button>   
+                    <div class="informacion">
                         <b><i> SOFKA </i></b><br>
-                        Junio 2022 - Actualidad<br>
+                        <i>Junio 2022 - Actualidad</i><br>
                         Diseño, creación e implementación de pruebas funcionales de manera automatizada y manual.
-                    </li></div>
-                </ul>
+                    </div>
                 
             </article>
         </div>

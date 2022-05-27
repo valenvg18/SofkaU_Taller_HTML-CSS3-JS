@@ -72,11 +72,11 @@
 
  .grid .item-contenido {
      position: relative;
-     border: 3px solid rgba(255, 125, 227, 0.466);
+     border: 3px solid rgba(233, 7, 177, 0.427);
      text-align: center;
-     box-shadow: 3px 3px black;
+     box-shadow: 5px 5px rgba(255, 125, 227, 0.466);
      margin: 5px;
-     max-width: 50%;
+     max-width: 100%;
  }
 
  .grid a {
@@ -103,7 +103,7 @@
      display: block;
      padding: 0;
      margin: 5px;
-     width: 40%;
+     width: 100%;
  }
 
  .grid .item h3 {

@@ -5,8 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables e Impresion - PSeInt</title>
+    <link rel="stylesheet" href="CSS/estilosPseint.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    hola
+    <header>
+        <h1>TALLER 1<br>VARIABLES E IMPRESIÓN</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <ol>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa el cual solicite su nombre y apellidos.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto1_Variables_e_Impresion
+        
+                                Definir nombre Como Caracter;
+                                Definir apellidos Como Caracter;
+                                
+                                
+                                Escribir "Por favor digita tu nombre:";
+                                leer nombre;
+                                
+                                Escribir "Por favor digita tus apellidos:";
+                                leer apellidos;
+                                
+                                
+                            FinProceso  
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto2_Variables_e_Impresion
+	
+                                Definir nombre Como Caracter;
+                                Definir apellidos Como Caracter;
+                                Definir edad Como Entero;
+                                Definir estatura Como Real;
+                                
+                                Escribir "Por favor digita tu nombre:";
+                                leer nombre;
+                                
+                                Escribir "Por favor digita tus apellidos:";
+                                leer apellidos;
+                                
+                                Escribir "¿Cual es tu edad?";
+                                leer edad;
+                                
+                                Escribir "¿Cuánto mides de estatura? (Escribir el número en metros, sepáralo con un punto)";
+                                leer estatura;
+                                
+                            FinProceso 
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa el cual solicite su nombre y apellidos, 
+                        también debe capturar nombre y apellidos de su padre y madre. 
+                        Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto3_Variables_e_Impresion
+	
+                                Definir nombre Como Caracter;
+                                Definir apellidos Como Caracter;
+                                Definir nombremadre Como Caracter;
+                                Definir nombrepadre Como Caracter;
+                                
+                                
+                                Escribir "Por favor digita tu nombre:";
+                                leer nombre;
+                                
+                                Escribir "Por favor digita tus apellidos:";
+                                leer apellidos;
+                                
+                                Escribir "Por favor digita nombre y apellidos de tu madre:";
+                                leer nombremadre;
+                                
+                                Escribir "Por favor digita nombre y apellidos de tu padre:";
+                                leer nombrepadre;
+                                
+                                Limpiar Pantalla;
+                                
+                                Escribir "Yo ", nombre, " ", apellidos, " soy hija de ", nombremadre, " y ", nombrepadre, ".";
+                                
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa el cual solicite el nombre de una ciudad capital y el país. 
+                        Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto4_Variables_e_Impresion
+	
+                                Definir capital Como Caracter;
+                                Definir pais Como Caracter;
+                                
+                                Escribir "¿Que pasís te gusta?:";
+                                leer pais;
+                                
+                                Escribir "¿Cuál es la capital de ese país?:";
+                                leer capital;
+                                
+                                Escribir "La ciudad ", capital, " es la capital del pais ", pais, ".";
+                                
+                            FinProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. 
+                        Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: 
+                        [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto5_Variables_e_Impresion
+	
+                                Definir nombremascota Como Caracter;
+                                Definir edad Como Entero;
+                                Definir tipo Como Caracter;
+                                Definir nombre Como Caracter;
+                                
+                                Escribir "¿Cuál es el nombre de tu mascota?:";
+                                leer nombremascota;
+                                
+                                Escribir "¿Cuál es la edad de tu mascota?:";
+                                leer edad;
+                                
+                                Escribir "¿Que raza es tu mascota?:";
+                                leer tipo;
+                                
+                                Escribir "¿Cuál es tu nombre completo?:";
+                                leer nombre;
+                                
+                                Escribir nombremascota, " es un(a) ", tipo, ", el cual, tiene ", edad, " año(s) de edad y ", nombre, " es actualmente su dueño(a).";
+                                
+                            FinProceso 
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+        </ol>
+    </div>
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Kc1dFbBR1s" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
 </body>
 </html>

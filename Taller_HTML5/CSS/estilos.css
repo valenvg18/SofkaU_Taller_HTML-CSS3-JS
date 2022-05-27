@@ -75,31 +75,25 @@ img {
 }
 
 #Caja_enlace {
-    
     width:300px;
    height:100px;
    border:2px solid rgb(236, 149, 216);
    border-radius:22px;
    background-color:#f7b3db;
-   padding:9px;
+   padding: 5px;
    box-shadow: 0 0 10px rgb(239, 128, 244);
-    
+   list-style: none;
     display: inline;
-    float: top;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .enlace {
-    
     display: inline;
-    float: top;
-    
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 100px; 
-    margin-bottom: 100px
-    
+    /* margin-top: 100px; 
+    margin-bottom: 100px */
 }
 
 

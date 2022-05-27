@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Valentina Villa Granados</title>
+    <link rel="stylesheet" href="CSS/estilosPortafolio.css" type="text/css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <!-- <script src="JS/mainPortafolio.js"></script> -->
+</head>
+<body>
+    
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <h1>Valentina Villa Granados</h1>
+                <p>Web Developer</p>
+            </div>
+            <form action="">
+                <input type="text" class="barraBusqueda" id="barraBusqueda" placeholder="Buscar">
+            </form>
+            <div class="categoria" id="categoria">
+                <h2><a href="#" class="activo">Todos</a></h2>
+                <h2><a href="#">PSeInt</a></h2>
+                <h2><a href="#">Java</a></h2>
+            </div>
+        </header>
+
+        <section class="grid" id="grid">
+            <div class="item" 
+                data-categoria="pseint"
+                data-etiquetas="talleres pseint variables impresion"
+                data-descripcion="Taller 1 en PSeInt - Variables e Impresion"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresPSeInt/taller1.html">Taller 1<br>Variables e Impresión<br>PSeInt</a></h3>
+                </div>
+
+            </div>
+
+            <div class="item" 
+                data-categoria="pseint"
+                data-etiquetas="talleres pseint condicionales"
+                data-descripcion="Taller 2 en PSeInt - Condicionales"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresPSeInt/taller2.html">Taller 2<br>Condicionales<br>PSeInt</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="pseint"
+                data-etiquetas="talleres pseint ciclos"
+                data-descripcion="Taller 3 en PSeInt - Ciclos"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresPSeInt/taller3.html">Taller 3<br>Ciclos<br>PSeInt</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="pseint"
+                data-etiquetas="talleres pseint arreglos"
+                data-descripcion="Taller 4 en PSeInt - Arreglos"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresPSeInt/taller4.html">Taller 4<br>Arreglos<br>PSeInt</a></h3>
+                </div>
+            </div>
+            
+            <div class="item" 
+                data-categoria="pseint"
+                data-etiquetas="talleres pseint funciones"
+                data-descripcion="Taller 5 en PSeInt - Funciones"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresPSeInt/taller5.html">Taller 5<br>Funciones<br>PSeInt</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="java"
+                data-etiquetas="talleres java variables impresion"
+                data-descripcion="Taller Variables e Impresion"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresJava/taller1.html">Taller 1<br>Variables e Impresión<br>Java</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="java"
+                data-etiquetas="talleres java condicionales"
+                data-descripcion="Taller Condicionales"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresJava/taller2.html">Taller 2<br>Condicionales<br>Java</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="java"
+                data-etiquetas="talleres java ciclos"
+                data-descripcion="Taller Ciclos"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresJava/taller3.html">Taller 3<br>Ciclos<br>Java</a></h3>
+                </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="java"
+                data-etiquetas="talleres java arreglos"
+                data-descripcion="Taller Arreglos"
+            >
+                <div class="item-contenido">
+                    <h3><a href="TalleresJava/taller4.html">Taller 4<br>Arreglos<br>Java</a></h3>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <script src="JS/mainPortafolio.js"></script>
+    
+
+</body>
+</html>

@@ -2,3 +2,52 @@ body {
     background: rgb(249, 208, 254);
     font-family: 'Open Sans', sans-serif;
 }
+
+a {
+    text-decoration: none; 
+    color: black;
+}
+
+a:hover {
+    color: rgb(255, 0, 166);
+}
+
+header {
+    text-align: center;
+    border: 3px solid rgba(233, 7, 177, 0.427);
+    border-radius: 50px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    box-shadow: 5px 5px rgba(255, 125, 227, 0.466);
+}
+
+h1 {
+    color:rgb(233, 58, 149);
+    text-shadow: 3px 3px 3px rgb(179, 177, 177);
+}
+
+.contenedor-lista {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    border: 3px solid rgba(255, 157, 214, 0.839);
+    
+}
+
+.enlaces {
+    border: 1px solid grey;
+    box-shadow: 3px 3px grey;
+    border-radius: 10px;
+    margin: 40px;
+    width:30%;
+    text-align: center;
+}
+
+.video {
+   text-align: center; 
+}
+
+
+

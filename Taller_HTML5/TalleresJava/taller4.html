@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>TALLER 1<br>VARIABLES E IMPRESIÓN</h1>
+        <h1>TALLER 4<br>ARREGLOS JAVA</h1>
     </header>
 
     <div>
@@ -22,61 +22,72 @@
             <div>
                 <pre>
                 <code>
-                    import javax.swing.JOptionPane;
+                    package taller4.main;
 
-                    public class Taller1 {
-                        public static void main(String[] args) throws Exception {
+                    import taller4.excercises.Punto_1;
+                    import taller4.excercises.Punto_2;
+                    import taller4.excercises.Punto_3;
+                    import taller4.excercises.Punto_4;
 
-                            
-                            int opcion;
+                    import java.util.Arrays;
+                    import java.util.Scanner;
 
-                            opcion = Integer.parseInt(JOptionPane.showInputDialog("¿Cuál punto del taller 1 desea ver?"));
-                            
+                    public class Main {
+                        public static void main(String[] args) {
+                            Scanner sc = new Scanner(System.in);
+                            boolean exit = true;
 
-                            switch (opcion) {
-                                case 1:
-                                    Punto1 punto1 = new Punto1();
-                                    punto1.pedirDatos();
-                                    mostrarCorrecto(); 
-                                    
+                            do {
+                                System.out.println();
+                                System.out.println("Bienvenido al menú del taller #4, por favor seleccione un punto a continuación: \n" +
+                                        "                1. Punto #1\n" +
+                                        "                2. Punto #2\n" +
+                                        "                3. Punto #3\n" +
+                                        "                4. Punto #4\n" +
+                                        "                5. Punto #5\n" +
+                                        "                6. Salir");
+                                int option = sc.nextInt();
+
+                                switch (option) {
+                                    case 1: {
+
+                                        Punto_1 punto_1 = new Punto_1();
+                                        punto_1.myArrayInput();
+                                        punto_1.myArrayIndex();
+                                    }
                                     break;
-
-                                case 2:
-                                    Punto2 punto2 = new Punto2();
-                                    punto2.pedirDatos();
-                                    mostrarCorrecto(); 
-
+                                    case 2: {
+                                        Punto_2 punto_2 = new Punto_2();
+                                        System.out.println("Números aleatorios: " + Arrays.toString(punto_2.fillArrayWithRandomNumber()));
+                                        punto_2.evenOrOddNumbers();
+                                        System.out.println();
+                                        System.out.println("Números pares: " + punto_2.getEvenNumbers());
+                                        System.out.println("Números impares: " + punto_2.getOddNumbers());
+                                    }
                                     break;
-
-                                case 3:
-                                    Punto3 punto3 = new Punto3();
-                                    punto3.pedirDatos();
-                                    punto3.mostrarMensaje();
-
+                                    case 3: {
+                                        Punto_3 punto_3 = new Punto_3();
+                                        punto_3.primeNumbers();
+                                        System.out.println(punto_3.getPrimeNumber());
+                                    }
                                     break;
-
-                                case 4:
-                                    Punto4 punto4 = new Punto4();
-                                    punto4.pedirDatos();
-                                    punto4.mostrarMensaje();
-
+                                    case 4: {
+                                        Punto_4 punto_4 = new Punto_4();
+                                        punto_4.a();
+                                    }
                                     break;
-
-                                case 5:
-                                    Punto5 punto5 = new Punto5();
-                                    punto5.pedirDatos();
-                                    punto5.mostrarMensaje();
-
+                                    case 5: {
+                                    }
                                     break;
-                            
-                                default:
-                                JOptionPane.showMessageDialog(null, "Esa opción no hace parte del menú"); 
+                                    case 6: {
+                                        System.out.println("Hasta pronto");
+                                        exit = false;
+                                    }
                                     break;
-                            }
-                        }
-
-                        public static void mostrarCorrecto () {
-                            JOptionPane.showMessageDialog(null, "¡Gracias! Ingresó correctamente los datos"); 
+                                    default:
+                                        System.out.println("Número equivocado, intentelo nuevamente");
+                                }
+                            } while (exit);
                         }
                     }
                 </code>
@@ -87,19 +98,16 @@
                 <h3>Archivos de Clases</h3>
 
                 <div class="enlacesGit">
-                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto1.java" target="_blank">Punto 1</a>
+                    <a href="https://github.com/valenvg18/Taller4_Java_Arreglos_Canteras1Sofka/blob/master/src/taller4/excercises/Punto_1.java" target="_blank">Punto 1</a>
                 </div>
-                <div>
-                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto2.java" target="_blank">Punto 2</a>
+                <div class="enlacesGit">
+                    <a href="https://github.com/valenvg18/Taller4_Java_Arreglos_Canteras1Sofka/blob/master/src/taller4/excercises/Punto_2.java" target="_blank">Punto 2</a>
                 </div>
-                <div>
-                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto3.java" target="_blank">Punto 3</a>
+                <div class="enlacesGit">
+                    <a href="https://github.com/valenvg18/Taller4_Java_Arreglos_Canteras1Sofka/blob/master/src/taller4/excercises/Punto_3.java" target="_blank">Punto 3</a>
                 </div>
-                <div>
-                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto4.java" target="_blank">Punto 4</a>
-                </div>
-                <div>
-                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto5.java" target="_blank">Punto 5</a>
+                <div class="enlacesGit">
+                    <a href="https://github.com/valenvg18/Taller4_Java_Arreglos_Canteras1Sofka/blob/master/src/taller4/excercises/Punto_4.java" target="_blank">Punto 4</a>
                 </div>
 
             </article>

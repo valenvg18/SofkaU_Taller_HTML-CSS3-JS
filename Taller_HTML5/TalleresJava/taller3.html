@@ -5,8 +5,652 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciclos - Java</title>
+    <link rel="stylesheet" href="CSSJava/estilosJava.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>TALLER 3<br>CICLOS JAVA</h1>
+    </header>
+
+    <div class="contenedor-lista">
+        <ol>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar la siguiente figura por medio del ciclo *Para*</h3>
+                    <img src="Img/arbolizquierda.PNG">
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto1;
+
+                                public class Main {
+                                
+                                
+                                    public static void main(String[] args) {
+                                
+                                        System.out.println("------ punto 1 ------");
+                                        String asterisco = "*";
+                                
+                                        for (int i = 1; i < 10; i++) {
+                                            System.out.println(asterisco);
+                                            asterisco += "*";
+                                        }
+                                    }
+                                } 
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar la siguiente figura por medio del ciclo *Mientras - Hacer*</h3>
+                    <img src="Img/arbolderecha.PNG">
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto2;
+
+                                public class Main {
+                                
+                                    public static void main(String[] args) {
+                                
+                                        System.out.println("------ punto 2 ------");
+                                        int i, j;
+                                        i = 1;
+                                
+                                        while (i <= 10) {
+                                            j = 1;
+                                            while (j <= 10) {
+                                                if (j > (10 - i)) {
+                                                    System.out.print("*");
+                                                } else {
+                                                    System.out.print(" ");
+                                                }
+                                
+                                                if (j == 10) {
+                                                    System.out.println(" ");
+                                                }
+                                                j = j + 1;
+                                            }
+                                            i = i + 1;
+                                
+                                        }
+                                    }
+                                }
+                            
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar la siguiente figura por medio del ciclo *Repetir - Hasta Que*</h3>
+                    <img src="Img/arbol.PNG">
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto3;
+
+                                public class Main {
+                                    public static void main(String[] args) {
+                                
+                                        System.out.println("------ punto 3 ------");
+                                
+                                        int filas, columnas, i, j;
+                                        filas = 0;
+                                        j = 2;
+                                
+                                        do {
+                                            columnas = 0;
+                                
+                                            if (filas < 12) {
+                                                do {
+                                                    columnas = columnas + 1;
+                                
+                                                    if ((columnas <= (20 / 2) - filas + 1) || (columnas >= (20 / 2) + filas + 1)) {
+                                                        System.out.print(" ");
+                                                    }
+                                
+                                                    if ((columnas > (20 / 2) - filas + 1) && (columnas < (20 / 2) + filas + 1)) {
+                                                        System.out.print("*");
+                                                    }
+                                
+                                                    if (columnas == 21) {
+                                                        System.out.println(" ");
+                                                    }
+                                                } while (columnas <= 21);
+                                            }
+                                
+                                
+                                            if (filas == 12) {
+                                                i = 2;
+                                
+                                
+                                                do {
+                                                    columnas = columnas + 1;
+                                
+                                                    if ((columnas <= (20 / 2) - i + 1) || (columnas >= (20 / 2) + i + 1)) {
+                                                        System.out.print(" ");
+                                                    }
+                                
+                                                    if ((columnas > (20 / 2) - i + 1) && (columnas < (20 / 2) + i + 1)) {
+                                                        System.out.print("*");
+                                
+                                                    }
+                                
+                                
+                                                    if (columnas == 21) {
+                                                        System.out.println(" ");
+                                
+                                                    }
+                                
+                                
+                                                } while (columnas <= 21);
+                                            }
+                                
+                                
+                                            if (filas > 12) {
+                                
+                                                do {
+                                                    columnas = columnas + 1;
+                                
+                                                    if ((columnas <= (20 / 2) - j + 1) || (columnas >= (20 / 2) + j + 1)) {
+                                                        System.out.print(" ");
+                                                    }
+                                
+                                                    if ((columnas > (20 / 2) - j + 1) && (columnas < (20 / 2) + j + 1)) {
+                                
+                                                        System.out.print("*");
+                                                    }
+                                
+                                                    if (columnas == 21) {
+                                                        System.out.println(" ");
+                                                    }
+                                
+                                                } while (columnas <= 21);
+                                
+                                                j = j + 1;
+                                            }
+                                
+                                            filas = filas + 1;
+                                
+                                        } while (filas < 16);
+                                
+                                
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por 
+                        medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, 
+                        entonces el resultado debería ser el siguiente:
+                    </h3>
+                    <img src="Img/cuadro.PNG">
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto4;
+
+                                import java.util.Scanner;
+                                
+                                public class Main {
+                                    public static void main(String[] args) {
+                                        System.out.println("------ punto 4 ------");
+                                        int digito;
+                                
+                                        System.out.println("TABLAS DE MULTIPLICAR");
+                                        System.out.println("Bienvenido al generador de tablas de multiplicar");
+                                        System.out.println("Por favor indique cual tabla de multiplicar desea ver:");
+                                
+                                
+                                        Scanner sc = new Scanner(System.in);
+                                        digito = sc.nextInt();
+                                        for (int i = 0; i < 10; i++) {
+                                            System.out.println(i + " x " + digito + " = " + i * digito);
+                                
+                                        }
+                                
+                                    }
+                                
+                                
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Utilizando el ciclo que usted desee, 
+                        crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+                    </h3>
+                    <img src="Img/menu.PNG">
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto5;
+
+                                import java.util.Scanner;
+                                
+                                public class Main {
+                                
+                                    public static void main(String[] args) {
+                                        System.out.println("------ punto 5 ------");
+                                
+                                        int opcionMenu;
+                                        String nombre;
+                                        Scanner sc = new Scanner(System.in);
+                                        System.out.println("===============================================");
+                                        System.out.println("Antes de iniciar con el menú, por favor digite su nombre: ");
+                                        nombre = sc.next();
+                                        System.out.print("\033[H\033[2J");
+                                        System.out.flush();
+                                
+                                        do {
+                                
+                                
+                                
+                                            System.out.println("MENÚ DEL USUARIO");
+                                            System.out.println("Indique con el numero correspondiente, la opción que desea: ");
+                                            System.out.println("1. Captura nombre");
+                                            System.out.println("2. Saludar persona");
+                                            System.out.println("3. Salir del sistema");
+                                            opcionMenu = sc.nextInt();
+                                
+                                            switch (opcionMenu) {
+                                                case 1:
+                                                    System.out.println(nombre + " su nombre ha sido capturado por el sistema");
+                                                    break;
+                                
+                                                case 2:
+                                                    System.out.println("¡Hola " + nombre + " es un gusto enorme tenerte por acá!");
+                                                    break;
+                                                case 3:
+                                                    System.out.println(nombre + ", nos despedimos. ¡Esperamos tenerte de nuevo!");
+                                                    break;
+                                
+                                                default:
+                                                    System.out.println("Opcion incorrecta, vuela a ingresar una opcion");
+                                                    opcionMenu=0;
+                                                    break;
+                                
+                                            }
+                                
+                                
+                                        } while (opcionMenu != 3);
+                                
+                                
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar 
+                        contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, 
+                        teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el 
+                        número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. 
+                        Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+                    </h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto6;
+
+                                import java.util.Scanner;
+                                
+                                public class main {
+                                
+                                
+                                
+                                    public static void contactoEliminado(String nombre, int telefono, String organizacion) {
+                                        imprimirInfoContacto(nombre, telefono, organizacion);
+                                        System.out.println("-------------------------------------------------------");
+                                        System.out.println("HA SIDO ELIMINADO");
+                                    }
+                                
+                                    public static void devolverInfoDeContacto(String nombre, int telefono, String organizacion) {
+                                        System.out.println("El contacto que esta buscando es:");
+                                        imprimirInfoContacto(nombre, telefono, organizacion);
+                                    }
+                                
+                                    public static void imprimirInfoContacto(String nombre, int telefono, String organizacion) {
+                                
+                                        System.out.println("-------------------------------------------------------");
+                                        System.out.println("Nombre: " + nombre);
+                                        System.out.println("Telefono: " + telefono);
+                                        System.out.println("Organizaci�n: " + organizacion);
+                                    }
+                                
+                                    public static void main(String[] args) {
+                                        System.out.println("------ punto 6 ------");
+                                
+                                        String nombre1, nombre2, nombre3;
+                                        int telefono1, telefono2, telefono3, busquedaTelefono, numeroDeTelefono;
+                                        String organizacion1, organizacion2, organizacion3;
+                                        String busquedaNombre, nombrecontacto;
+                                        int opcionDeBusqueda, solicitud;
+                                        Scanner sc = new Scanner(System.in);
+                                        numeroDeTelefono = 0;
+                                        nombrecontacto = "";
+                                        nombre1 = "";
+                                        nombre2 = "";
+                                        nombre3 = "";
+                                        telefono1 = 0;
+                                        telefono2 = 0;
+                                        telefono3 = 0;
+                                        organizacion1 = "";
+                                        organizacion2 = "";
+                                        organizacion3 = "";
+                                
+                                        System.out.println("BIENVENIDO");
+                                
+                                        for (int i = 1; i <= 3; i++) {
+                                            System.out.println("=======================================================");
+                                            System.out.println("PARA AGREGAR CONTACTO #" + i);
+                                            System.out.println("-------------------------------------------------------");
+                                            System.out.println("Escribe el nombre completo: ");
+                                
+                                
+                                            if (nombre1.equals("")) {
+                                                nombre1 = sc.next();
+                                            } else if (nombre2.equals("")) {
+                                                nombre2 = sc.next();
+                                
+                                            } else if (nombre3.equals("")) {
+                                                nombre3 = sc.next();
+                                            }
+                                
+                                
+                                            System.out.println("�Cu�l es su n�mero telef�nico?");
+                                
+                                            numeroDeTelefono = sc.nextInt();
+                                
+                                            while ((numeroDeTelefono == telefono1) || (numeroDeTelefono == telefono2)) {
+                                                System.out.println("Este numero de telefono ya existe. Por favor ingrese otro:");
+                                                numeroDeTelefono = sc.nextInt();
+                                            }
+                                
+                                            if (telefono1 == 0) {
+                                                telefono1 = numeroDeTelefono;
+                                            } else if (telefono2 == 0) {
+                                                telefono2 = numeroDeTelefono;
+                                
+                                            } else if (telefono3 == 0) {
+                                                telefono3 = numeroDeTelefono;
+                                            }
+                                
+                                            System.out.println("�En que organizaci�n podr�a ubicar a este contacto?");
+                                
+                                            if (organizacion1.equals("")) {
+                                                organizacion1 = sc.next();
+                                            } else if (organizacion2.equals("")) {
+                                                organizacion2 = sc.next();
+                                
+                                            } else if (organizacion3.equals("")) {
+                                                organizacion3 = sc.next();
+                                            }
+                                
+                                        }
+                                
+                                        do {
+                                            System.out.println("=======================================================");
+                                            System.out.println("�Que otra solicitud desea procesar?");
+                                            System.out.println("1. Buscar contactos almacenados");
+                                            System.out.println("2. Eliminar alg�n contacto ");
+                                            System.out.println("3. Salir del sistema");
+                                            solicitud = sc.nextInt();
+                                
+                                            System.out.flush();
+                                
+                                            switch (solicitud) {
+                                                case 1:
+                                                    System.out.println("�C�mo desea buscar su contacto?");
+                                                    System.out.println("1. Nombre");
+                                                    System.out.println("2. Telefono");
+                                                    opcionDeBusqueda = sc.nextInt();
+                                
+                                                    System.out.flush();
+                                
+                                                    if (opcionDeBusqueda == 1) {
+                                                        System.out.println("Ingrese el nombre del contacto que desea buscar");
+                                                        busquedaNombre = sc.next();
+                                
+                                
+                                                        if (busquedaNombre.equals(nombre1)) {
+                                                            devolverInfoDeContacto(nombre1, telefono1, organizacion1);
+                                                        } else if (busquedaNombre.equals(nombre2)) {
+                                                            devolverInfoDeContacto(nombre2, telefono2, organizacion2);
+                                                        } else if (busquedaNombre.equals(nombre3)) {
+                                                            devolverInfoDeContacto(nombre3, telefono3, organizacion3);
+                                                        } else {
+                                                            System.out.println("Ese nombre NO EXISTE.");
+                                                        }
+                                
+                                                    } else {
+                                                        System.out.println("Ingrese el numero del contacto que desea buscar");
+                                                        busquedaTelefono = sc.nextInt();
+                                
+                                                        if (busquedaTelefono == telefono1) {
+                                                            devolverInfoDeContacto(nombre1, telefono1, organizacion1);
+                                                        } else if (busquedaTelefono == telefono2) {
+                                                            devolverInfoDeContacto(nombre2, telefono2, organizacion2);
+                                                        } else if (busquedaTelefono == telefono3) {
+                                                            devolverInfoDeContacto(nombre3, telefono3, organizacion3);
+                                                        } else {
+                                                            System.out.println("Ese n�mero NO EXISTE");
+                                                        }
+                                                    }
+                                                    break;
+                                                case 2:
+                                                    System.out.println("�Cu�l es el nombre del contacto que deseas eliminar?");
+                                                    nombrecontacto = sc.next();
+                                                    System.out.flush();
+                                
+                                                    while (!nombrecontacto.equals(nombre1) && !nombrecontacto.equals(nombre2) && !nombrecontacto.equals(nombre3)) {
+                                                        System.out.println("Este nombre de contacto no existe en la lista. Por favor ingrese uno que si se encuentre.");
+                                                        nombrecontacto = sc.next();
+                                                    }
+                                
+                                                    if (nombrecontacto.equals(nombre1)) {
+                                
+                                                        contactoEliminado(nombre1, telefono1, organizacion1);
+                                
+                                                        nombre1 = "";
+                                                        telefono1 = 0;
+                                                        organizacion1 = "";
+                                                    } else if (nombrecontacto.equals(nombre2)) {
+                                
+                                                        contactoEliminado(nombre2, telefono2, organizacion2);
+                                
+                                                        nombre2 = "";
+                                                        telefono2 = 0;
+                                                        organizacion2 = "";
+                                                    } else if (nombrecontacto.equals(nombre3)) {
+                                
+                                                        contactoEliminado(nombre3, telefono3, organizacion3);
+                                
+                                                        nombre3 = "";
+                                                        telefono3 = 0;
+                                                        organizacion3 = "";
+                                                    }
+                                
+                                                    break;
+                                                case 3:
+                                                    System.out.println("¡VUELVA PRONTO!");
+                                                    break;
+                                                default:
+                                                    solicitud = 3;
+                                                    break;
+                                            }
+                                
+                                        } while (solicitud != 3);
+                                
+                                
+                                    }
+                                
+                                }
+                                
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            
+            <div class="puntoTaller">
+                <li>
+                    <h3>La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los 
+                        cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite 
+                        de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+                        consultar usuarios que hayan presentado el curso y resultados de la prueba del curso 
+                        (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+                        Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+                    </h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                                package taller3.punto8;
+
+                                import java.util.Scanner;
+                                
+                                public class Main {
+                                    public static void buscarUsuario(String arreglo[][], String nombre) {
+                                
+                                        String mensaje = "";
+                                        for (int i = 0; i < arreglo.length; i++) {
+                                            if (arreglo[i][0].equals(nombre)) {
+                                                mensaje = ("El estudiante " + arreglo[i][0] + " tiene " + arreglo[i][1]);
+                                            }
+                                        }
+                                        if (mensaje.equals("")) {
+                                            System.out.println("Ese nombre no ha sido registrado en la escuela automovilística");
+                                        } else {
+                                            System.out.println(mensaje);
+                                        }
+                                    }
+                                
+                                    public static void main(String[] args) {
+                                        String arregloUsuarios[][] = new String[8][2];
+                                        int opcionMenu;
+                                        int usuarios = 1;
+                                        int masUsuarios = 1;
+                                        String nombreUSuario, aprobo, buscarNombre;
+                                        Scanner sc = new Scanner(System.in);
+                                
+                                        //inicializacion de arreglo
+                                        for (int i = 0; i < arregloUsuarios.length; i++) {
+                                            arregloUsuarios[i][0] = "";
+                                            arregloUsuarios[i][1] = "";
+                                
+                                        }
+                                
+                                
+                                        do {
+                                
+                                            System.out.println("==============================================");
+                                            System.out.println("ESCUELA AUTOMOVILÍSTICA - EL MAESTRO");
+                                            System.out.println("----------------------------------------------");
+                                
+                                            System.out.println("¿Cuál es la solicitud que desea realizar?");
+                                            System.out.println("1. Registrar Usuarios");
+                                            System.out.println("2. Consultar Usuarios");
+                                            System.out.println("3. Salir");
+                                            opcionMenu = sc.nextInt();
+                                
+                                            switch (opcionMenu) {
+                                                case 1:
+                                                    if (usuarios == 8) {
+                                                        System.out.println("==============================================");
+                                                        System.out.println("Ya ingreso el máximo de usuarios");
+                                                        System.out.println("--------------------------------------------");
+                                                    } else {
+                                
+                                
+                                                        while (usuarios <= 8 && masUsuarios == 1) {
+                                                            System.out.println("usuario numero: " + usuarios);
+                                
+                                                            System.out.println("Ingrese el nombre del usuario");
+                                                            nombreUSuario = sc.next();
+                                
+                                                            for (int i = 0; i < arregloUsuarios.length; i++) {
+                                                                while (arregloUsuarios[i][0].equals(nombreUSuario)) {
+                                                                    System.out.println("Ese usuario ya se encuentra registrado en el usuario " + (i + 1) + " por favor ingrese otro nombre: ");
+                                                                    nombreUSuario = sc.next();
+                                                                }
+                                
+                                                            }
+                                
+                                                            arregloUsuarios[usuarios - 1][0] = nombreUSuario;
+                                
+                                
+                                                            System.out.println("¿Este usuario aprobó el curso?");
+                                                            System.out.println("Responda SI o NO, según el caso");
+                                
+                                                            aprobo = sc.next();
+                                
+                                                            if (aprobo.equals("SI") || aprobo.equals("si")) {
+                                                                arregloUsuarios[usuarios - 1][1] = "Estado de la licencia APROBADO";
+                                                            } else {
+                                                                arregloUsuarios[usuarios - 1][1] = "Estado de la licencia DENEGADO";
+                                                            }
+                                
+                                                            if (usuarios <= 7) {
+                                                                System.out.println("============================================");
+                                                                System.out.println("¿Desea registrar mas usuarios?");
+                                                                System.out.println("1. Si");
+                                                                System.out.println("2. Deseo salir al menú principal");
+                                                                System.out.println("(Escriba 1 o 2 según su caso)");
+                                                                masUsuarios = sc.nextInt();
+                                                                usuarios += 1;
+                                
+                                                            } else {
+                                                                masUsuarios = 2;
+                                                            }
+                                
+                                                        }
+                                                    }
+                                                    masUsuarios = 1;
+                                
+                                                    break;
+                                                case 2:
+                                                    System.out.println("Escriba el nombre del usuario qeu desea consultar");
+                                
+                                                    buscarNombre = sc.next();
+                                
+                                                    buscarUsuario(arregloUsuarios, buscarNombre);
+                                                    break;
+                                
+                                                default:
+                                                    opcionMenu = 3;
+                                                    System.out.println("Ha salido del sistema. ¡NOS VEMOS PRONTO!");
+                                
+                                                    break;
+                                            }
+                                
+                                
+                                        } while (opcionMenu != 3);
+                                
+                                
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+        </ol>
+    </div>
+
 </body>
 </html>

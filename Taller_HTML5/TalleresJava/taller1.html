@@ -5,8 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables e Impresion - Java</title>
+    <link rel="stylesheet" href="CSSJava/estilosJava.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>TALLER 1<br>VARIABLES E IMPRESIÓN JAVA</h1>
+    </header>
+
+    <div>
+        <h3>CLASE MAIN</h3>
+    </div>
+
+    <div>
+        <section>
+            <div>
+                <pre>
+                <code>
+                    import javax.swing.JOptionPane;
+
+                    public class Taller1 {
+                        public static void main(String[] args) throws Exception {
+
+                            
+                            int opcion;
+
+                            opcion = Integer.parseInt(JOptionPane.showInputDialog("¿Cuál punto del taller 1 desea ver?"));
+                            
+
+                            switch (opcion) {
+                                case 1:
+                                    Punto1 punto1 = new Punto1();
+                                    punto1.pedirDatos();
+                                    mostrarCorrecto(); 
+                                    
+                                    break;
+
+                                case 2:
+                                    Punto2 punto2 = new Punto2();
+                                    punto2.pedirDatos();
+                                    mostrarCorrecto(); 
+
+                                    break;
+
+                                case 3:
+                                    Punto3 punto3 = new Punto3();
+                                    punto3.pedirDatos();
+                                    punto3.mostrarMensaje();
+
+                                    break;
+
+                                case 4:
+                                    Punto4 punto4 = new Punto4();
+                                    punto4.pedirDatos();
+                                    punto4.mostrarMensaje();
+
+                                    break;
+
+                                case 5:
+                                    Punto5 punto5 = new Punto5();
+                                    punto5.pedirDatos();
+                                    punto5.mostrarMensaje();
+
+                                    break;
+                            
+                                default:
+                                JOptionPane.showMessageDialog(null, "Esa opción no hace parte del menú"); 
+                                    break;
+                            }
+                        }
+
+                        public static void mostrarCorrecto () {
+                            JOptionPane.showMessageDialog(null, "¡Gracias! Ingresó correctamente los datos"); 
+                        }
+                    }
+                </code>
+                </pre>
+            </div>
+
+            <article>
+                <h3>Archivos de Clases</h3>
+
+                <div class="enlacesGit">
+                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto1.java" target="_blank">Punto 1</a>
+                </div>
+                <div>
+                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto2.java" target="_blank">Punto 2</a>
+                </div>
+                <div>
+                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto3.java" target="_blank">Punto 3</a>
+                </div>
+                <div>
+                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto4.java" target="_blank">Punto 4</a>
+                </div>
+                <div>
+                    <a href="https://github.com/valenvg18/Taller1_Java_Canteras1Sofka/blob/master/src/Punto5.java" target="_blank">Punto 5</a>
+                </div>
+
+            </article>
+        </section>
+    </div>
 </body>
 </html>

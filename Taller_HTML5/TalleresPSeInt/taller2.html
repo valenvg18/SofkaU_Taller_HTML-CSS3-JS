@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales PSeInt</title>
+    <link rel="stylesheet" href="CSSpseint/estilosPseint.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>TALLER 2<br>CONDICIONALES</h1>
+        <h2></h2>
+    </header>
+
+    <div class="contenedor-lista">
+        <ol>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite la edad de una persona. 
+                        Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h3>
+                    <div class="codigo">
+                        <p>Estará unido al siguiente punto</p>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite la edad de una persona. 
+                        Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto1y2_Condicionales
+	
+                                Definir edad Como Entero;
+                                
+                                Escribir "¿Que edad tienes?";
+                                leer edad;
+                                
+                                Si edad >= 18 Entonces
+                                    Escribir "Usted es mayor de edad";
+                                SiNo
+                                    Escribir "Usted aún es un niño(a)";
+                                FinSi
+                                
+                            FinProceso 
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. 
+                        Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. 
+                        Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: 
+                        [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto3_Condicionales
+	
+                                Escribir "------REGISTRO ENTRADAS A LA FIESTA------";
+                                
+                                Definir nombre Como Caracter;
+                                Definir apellidos Como Caracter;
+                                Definir edad Como Entero;
+                                
+                                Escribir "¿Cuál es tu nombre?";
+                                Leer nombre;
+                                
+                                Escribir "¿Cuáles son tus apellidos?";
+                                leer apellidos;
+                                
+                                Escribir "¿Cuál es tu edad?";
+                                leer edad;
+                                
+                                Limpiar Pantalla;
+                                
+                                Si edad >= 18 Entonces
+                                    Escribir nombre, " ", apellidos, " Usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+                                SiNo
+                                    Escribir nombre, " ", apellidos, " Usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuélvase a su casa."; 
+                                FinSi
+                                
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio 
+                        el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que 
+                        adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, 
+                        consultar películas disponibles y recibir película en la video tienda con la opción de realizar 
+                        anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto4_Condicionales
+	
+                                Definir nombre Como Caracter;
+                                Definir opcion Como Entero;
+                                Definir pelicula Como Entero;
+                                Definir p1, p2, p3, p4, p5 Como Caracter;
+                                Definir novedad Como Caracter;
+                            
+                                
+                                P1 <- "Los Avengers Endgame";
+                                P2 <- "Encanto";
+                                P3 <- "El Conjuro";
+                                P4 <- "Matrix";
+                                P5 <- "King Kong";
+                                
+                                Escribir "ALQUILER PELICULAS EL PROVENIR";
+                                Escribir "---------------------------------";
+                                
+                                Escribir "¿Cuál es el nombre del usuario?";
+                                Leer nombre;
+                                
+                                Escribir "Bienvenido(a) ", nombre, " a la video tienda del Porvenir";
+                                
+                                Escribir "Elije la opcion que deseas ver";
+                                Escribir "1. Consultar peliculas disponibles";
+                                Escribir "2. Alquilar pelicula";
+                                Escribir "3. Entregar pelicula";
+                                Leer opcion;
+                                
+                                Limpiar Pantalla;
+                                
+                                Segun opcion Hacer
+                                    1:
+                                        Escribir "Las peliculas disponibles en la video tienda son: "; 
+                                        Escribir "1. ", P1;
+                                        Escribir "2. ", P2;
+                                        Escribir "3. ", P3;
+                                        Escribir "4. ", P4;
+                                        Escribir "5. ", P5;
+                                    2:
+                                        Escribir "¿Cuál pelicula deseas alquilar?";
+                                        Escribir "Las peliculas disponibles en la video tienda son: "; 
+                                        Escribir "1. ", P1;
+                                        Escribir "2. ", P2;
+                                        Escribir "3. ", P3;
+                                        Escribir "4. ", P4;
+                                        Escribir "5. ", P5;
+                                        leer pelicula;
+                                        Segun pelicula Hacer
+                                            1:
+                                                Escribir "Alquilaste Los Avengers Endgame";
+                                            2:
+                                                Escribir "Alquilaste Encanto";
+                                            3:
+                                                Escribir "Alquilaste El Conjuro";
+                                            4: 
+                                                Escribir "Alquilaste Matrix";
+                                            5:
+                                                Escribir "Alquilaste King Kong";
+                                            De Otro Modo:
+                                                Escribir "Pelicula no disponible";
+                                        FinSegun
+                                        
+                                    3:
+                                        Escribir "¿Que pelicula deseas entregar?";
+                                        Escribir "1. ", P1;
+                                        Escribir "2. ", P2;
+                                        Escribir "3. ", P3;
+                                        Escribir "4. ", P4;
+                                        Escribir "5. ", P5;
+                                        leer pelicula;
+                                        Segun pelicula Hacer
+                                            1:
+                                                Escribir "Entrgaste Los Avengers Endgame";
+                                            2:
+                                                Escribir "Entregaste Encanto";
+                                            3:
+                                                Escribir "Entregaste El Conjuro";
+                                            4: 
+                                                Escribir "Entregaste Matrix";
+                                            5:
+                                                Escribir "Entregaste King Kong";
+                                            De Otro Modo:
+                                                Escribir "Esa pelicula no hace parte de nuestra video tienda";
+                                        FinSegun
+                                        
+                                        Escribir "¿Tienes alguna sugerencia o novedad frente a la pelicula alquilada o el servicio prestado?";
+                                        Escribir "Escribir Si o No según el caso";
+                                        Definir opcionSugerencia Como Caracter;
+                                        Leer  opcionSugerencia;
+                                        
+                                        
+                                        Si opcionSugerencia = "si" Entonces
+                                            Escribir "Escribir tu sugerencia o novedad";
+                                            leer novedad;
+                                            Escribir "LO TENDREMOS EN CUENTA! GRACIAS POR UTILIZAR NUESTROS SERVICIOS";
+                                            
+                                        SiNo
+                                            Escribir "GRACIAS POR UTILIZAR NUESTROS SERVICIOS";
+                                        FinSi
+                                        
+                                        
+                                    De Otro Modo:
+                                        Escribir "La opción escogida no hace parte de nuestro menú. Vuelve a intentarlo";
+                                FinSegun
+                            
+                                
+                                
+                            FinProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para 
+                        poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas 
+                        características que deben indicársele al cliente para que pueda escoger el producto a comprar. 
+                        Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto 
+                        y devoluciones en caso de que se presenten.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto5_Condicionales
+	
+                                Escribir "BIENVENIDO A LA DROGUERÍA MI SALUD";
+                                Escribir "-----------------------------------------";
+                                
+                                Definir categoriaproducto Como Entero;
+                                Definir medicamentos como Entero; 
+                                Definir opcion, razonDevolucion Como Caracter;
+                                Definir Advil, Dolex, Pax, Acetaminofen, Noxpirin, Ibuprofeno, Desodorante, Shampoo Como Caracter;
+                                Definir solicitud Como entero;
+                                Definir devolucion Como Entero;
+                                
+                                Advil <- "$13.000";
+                                Dolex <- "$16.000";
+                                Pax <- "$3.000";
+                                Acetaminofen <- "$10.000";
+                                Noxpirin <- "$14.000";
+                                Ibuprofeno <- "$6.000";
+                                Desodorante <- "$11.000";
+                                Shampoo <- "$20.000";
+                                
+                                Escribir "¿Cuál es la soliciud que desea realizar?";
+                                Escribir "1. Comprar un medicamento o producto";
+                                Escribir "2. Devolución de un producto";
+                                leer solicitud;
+                                
+                                Limpiar Pantalla;
+                                
+                                Si solicitud = 1 Entonces
+                                    
+                                    Escribir "¿Que categoría de productos quisieras ver?";
+                                    Escribir "(Elije 1, 2, 3 o 4 según el caso)";
+                                    Escribir "1. Medicamentos para el dolor de cabeza";
+                                    Escribir "2. Medicamentos para la gripa";
+                                    Escribir "3. Medicamentos para el malestar general";
+                                    Escribir "4. Productos de higiene personal";
+                                    
+                                    leer categoriaproducto;
+                                    
+                                    Escribir "------------------------------------------------------------------";
+                                    
+                                    
+                                    Segun categoriaproducto Hacer
+                                        1:
+                                            Escribir "Los medicamentos disponibles para el dolor de cabeza son:";
+                                            Escribir "1. Advil";
+                                            Escribir "2. Dolex";
+                                            Escribir "Escribe 1 o 2 según el que necesites, para saber el precio";
+                                            leer medicamentos;
+                                            
+                                            Segun medicamentos Hacer
+                                                1:
+                                                    Escribir "El precio del Advil es: ", Advil;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                2:
+                                                    Escribir "El precio del Dolex es: ", Dolex;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                De Otro Modo:
+                                                    Escribir "No tenemos ese medicamento para la cabeza en stock";
+                                            FinSegun
+                                            
+                                        2:
+                                            Escribir "Los medicamentos disponibles para la gripa son:";
+                                            Escribir "1. Pax";
+                                            Escribir "2. Noxpirin";
+                                            Escribir "Escribe 1 o 2 según el que necesites, para saber el precio";
+                                            leer medicamentos;
+                                            
+                                            Segun medicamentos Hacer
+                                                1:
+                                                    Escribir "El precio del Pax es: ", Pax;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                2:
+                                                    Escribir "El precio del Noxpirin es: ", Noxpirin;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                De Otro Modo:
+                                                    Escribir "No tenemos ese medicamento para la gripa en stock";
+                                            FinSegun
+                                            
+                                        3:
+                                            Escribir "Los medicamentos disponibles para el malestar en general son:";
+                                            Escribir "1. Acetaminofen";
+                                            Escribir "2. Ibuprofeno";
+                                            Escribir "Escribe 1 o 2 según el que necesites, para saber el precio";
+                                            leer medicamentos;
+                                            
+                                            Segun medicamentos Hacer
+                                                1:
+                                                    Escribir "El precio del Acetaminofen es: ", Acetaminofen;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                2:
+                                                    Escribir "El precio del Ibuprofeno es: ", Ibuprofeno;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                De Otro Modo:
+                                                    Escribir "No tenemos ese medicamento para el malestar general en stock";
+                                            FinSegun
+                                            
+                                        4: 
+                                            Escribir "Los productos disponibles para el cuidado e higiene personal son:";
+                                            Escribir "1. Desodorante";
+                                            Escribir "2. Shampoo para el cabello";
+                                            Escribir "Escribe 1 o 2 según el que necesites, para saber el precio";
+                                            leer medicamentos;
+                                            
+                                            Segun medicamentos Hacer
+                                                1:
+                                                    Escribir "El precio del Desodorante es: ", Desodorante;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                2:
+                                                    Escribir "El precio del Shampoo para el cabello es: ", Shampoo;
+                                                    Escribir "¿Deseas comprarlo?";
+                                                    leer opcion;
+                                                    Si (opcion = "si") o (opcion = "Si") o (opcion = "SI") Entonces
+                                                        Escribir "HECHO! Producto comprado";
+                                                    SiNo
+                                                        Escribir "Puedes mirar otros productos";
+                                                    FinSi
+                                                De Otro Modo:
+                                                    Escribir "No tenemos ese producto en stock";
+                                            FinSegun
+                                            
+                                        De Otro Modo:
+                                            Escribir "Opción incorrecta. Por favor marque una opcion que est designada";
+                                    FinSegun
+                                    
+                                Sino 
+                                    Escribir "¿Cuál es el producto o medicamento que desea devolver?";
+                                    Escribir "1. Advil";
+                                    Escribir "2. Dolex";
+                                    Escribir "3. Pax";
+                                    Escribir "4. Noxpirin";
+                                    Escribir "5. Acetaminofen";
+                                    Escribir "6. Ibuprofeno";
+                                    Escribir "7. Desodorante";
+                                    Escribir "8. Shampoo para el Cabello";
+                                    
+                                    leer devolucion;
+                                    
+                                    Escribir "¿Por qué desea realizar la devolución?";
+                                    Leer razonDevolucion;
+                                    
+                                    Segun devolucion Hacer
+                                        1:
+                                            Escribir "Advil en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        2:
+                                            Escribir "Dolex en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        3:
+                                            Escribir "Pax en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        4:
+                                            Escribir "Noxpirin en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        5:
+                                            Escribir "Acetaminofen en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        6:
+                                            Escribir "Ibuprofeno en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        7:
+                                            Escribir "Desodorante en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                        8:
+                                            Escribir "Shampoo en proceso de devolución porque: ", razonDevolucion;
+                                            Escribir "-----------------------------------------------------------------------------";
+                                            Escribir "En unos instantes le daremos información sobre su solicitud. GRACIAS";
+                                            
+                                        De Otro Modo:
+                                            Escribir "Devolución no válida";
+                                    FinSegun
+                                FinSi
+                                
+                                
+                                
+                            FinProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las 
+                        respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. 
+                        Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera 
+                        inventariar cambios repuestos en la motocicleta al entregarla.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto6_Condicionales
+	
+                                Definir solicitud Como Entero;
+                                Definir cilindraje Como Entero;
+                                Definir marca Como Caracter;
+                                Definir modelo Como Caracter;
+                                Definir placa Como Caracter;
+                                Definir nombre Como Caracter;
+                                Definir observaciones Como Caracter;
+                                Definir razon Como Entero;
+                                Definir respuesta Como Logico;
+                                Definir respuesta1 Como Logico;
+                                Definir respuesta_arreglo Como Logico;
+                                Definir respuesta_repuestos Como Logico;
+                                Definir salida Como Logico;
+                                Definir mantenimiento Como Caracter;
+                                Definir motor Como Caracter;
+                                Definir frenos Como Caracter;
+                                Definir filtro Como Caracter;
+                                Definir novedad Como Caracter;
+                                Definir cadenamoto Como Caracter;
+                                Definir arreglo Como Caracter;
+                                Definir repuestos Como Caracter;
+                                
+                                mantenimiento <- "";
+                                motor <- "";
+                                frenos <- "";
+                                filtro <- "";
+                                cadenamoto <- "";
+                                novedad <- "";
+                                arreglo <- "";
+                                repuestos <- "";
+                                respuesta <- Falso;
+                                respuesta1 <- Falso;
+                                respuesta_arreglo <- Falso;
+                                salida <- Verdadero;
+                                
+                                
+                                Escribir "TALLER DE MOTOS EL MAQUINISTA";
+                                Escribir "--------------------------------------";
+                                Escribir "¿Que solicitud desea realizar?";
+                                Escribir "1. Moto para ingresar al taller";
+                                Escribir "2. Moto para darle salida del taller";
+                                leer solicitud;
+                                Limpiar Pantalla;
+                                
+                                Segun solicitud Hacer
+                                    1:
+                                        Escribir "¿Cuál es el cilindraje de la moto que se va a ingresar?";
+                                        Leer cilindraje;
+                                        
+                                        Si cilindraje >= 400 Entonces
+                                            
+                                            Escribir "¿Que marca es la moto a ingresar?";
+                                            leer marca;
+                                            
+                                            Escribir "¿Que modelo es la moto a ingresar?";
+                                            leer modelo;
+                                            
+                                            Escribir "¿Que placa tiene la moto a ingresar?";
+                                            leer placa;
+                                            
+                                            Escribir "¿Cuál es el nombre completo del propietario de la moto?";
+                                            Leer nombre;
+                                            
+                                            Limpiar Pantalla;
+                                            Escribir "¿Cuáles fueron las observaciones por parte del propietario de la moto?";
+                                            Leer observaciones;
+                                            Escribir "--------------------------------------------------------------------------";
+                                            
+                                            Escribir "Según las observaciones del propietario, la razón por la cual la moto ingreso al taller, se puede clasificar como:";
+                                            Escribir "1. Mantenimiento General";
+                                            Escribir "2. Problema en el motor";
+                                            Escribir "3. Problemas con los frenos o cambio de pastas";
+                                            Escribir "4. Anomalías con el filtro o cambio de este";
+                                            Escribir "5. Problema en la cadena";
+                                            Leer razon;
+                                            Limpiar Pantalla;
+                                            
+                                            Segun razon Hacer
+                                                1:
+                                                    Escribir "¿La moto solo necesitó mantenimineto general?";
+                                                    Escribir "(Responder Verdadero o Falso según el caso)";
+                                                    leer respuesta;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        Escribir "Describa el mantenimiento general que se le realizará a la moto";
+                                                        leer mantenimiento;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    SiNo
+                                                        Escribir "Describa la novedad encontrada en la motocicleta";
+                                                        Leer novedad;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    FinSi
+                                                2:
+                                                    Escribir "¿La moto solo tuvo problemas referente al motor o su correcto funcionamiento?";
+                                                    Escribir "(Responder Verdadero o Falso según el caso)";
+                                                    leer respuesta;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        Escribir "Describa el daño del motor que presentaba la moto";
+                                                        leer motor;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    SiNo
+                                                        Escribir "Describa la novedad encontrada en la motocicleta";
+                                                        Leer novedad;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    FinSi
+                                                3:
+                                                    Escribir "¿La moto solo tuvo problemas referente a los frenos o se realizará solo cambio de pastas?";
+                                                    Escribir "(Responder Verdadero o Falso según el caso)";
+                                                    leer respuesta;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        Escribir "Especificar el problema de frenos detectado en la moto o si es referente al cambio de pastas, especificar la cantidad cambiada y por cuales se cambio";
+                                                        leer frenos;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    SiNo
+                                                        Escribir "Describa la novedad encontrada en la motocicleta";
+                                                        Leer novedad;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    FinSi
+                                                4:
+                                                    Escribir "¿La moto solo tuvo anomalías refrente al filtro o solo se le realizará cambio de este?";
+                                                    Escribir "(Responder Verdadero o Falso según el caso)";
+                                                    leer respuesta;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        Escribir "Especificar las anomalias que se presentaron con el filtro o especificar si fue cambio de este";
+                                                        leer filtro;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    SiNo
+                                                        Escribir "Describa la novedad encontrada en la motocicleta";
+                                                        Leer novedad;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    FinSi
+                                                5:
+                                                    Escribir "¿La moto solo tuvo problemas referente a la cadena?";
+                                                    Escribir "(Responder Verdadero o Falso según el caso)";
+                                                    leer respuesta;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        Escribir "Describa el problema presentado en la cadena";
+                                                        leer cadenamoto;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    SiNo
+                                                        Escribir "Describa la novedad encontrada en la motocicleta";
+                                                        Leer novedad;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Guardado en el sistema";
+                                                    FinSi
+                                                    
+                                                De Otro Modo:
+                                                    Escribir "Eligió una opción incorrecta. Intente de nuevo.";
+                                            FinSegun
+                                            
+                                            Escribir "¿Desea darle salida a la moto?";
+                                            Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                            Leer salida;
+                                            Limpiar Pantalla;
+                                            
+                                            Si salida = Falso Entonces
+                                                
+                                            
+                                                Escribir "¿Hubo algun arreglo adicional hecho por parte del mecánico?";
+                                                Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                                leer respuesta_arreglo;
+                                                Limpiar Pantalla;
+                                                
+                                                Si respuesta_arreglo = Verdadero Entonces
+                                                    Escribir "Describa especificamente que arreglos necesitó";
+                                                    leer arreglo;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Escribir "Al realizar el arreglo, ¿Necesitó hacer uso de repuestos?";
+                                                    Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                                    Leer respuesta_repuestos;
+                                                    Escribir "--------------------------------------------------------------";
+                                                
+                                                    Si respuesta_repuestos = Verdadero Entonces
+                                                        Escribir "Mencione los respuestos utilizados para el arreglo";
+                                                        leer repuestos;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Motocicleta lista para darle salida";
+                                                    SiNo
+                                                        Escribir "Motocicleta lista para darle salida";
+                                                    FinSi
+                                                
+                                                SiNo
+                                                    Escribir "Motocicleta lista para darle salida";
+                                                FinSi
+                                                
+                                                
+                                                
+                                            SiNo
+                                                Escribir "Motocicleta lista para darle salida";
+                                            FinSi
+                                            Escribir "----------------------------------------------------------------------------------";
+                                            
+                                            Escribir "Al propietario ", nombre, " de la moto de marca ", marca, " modelo ", modelo, " con cilindraje de ", cilindraje, " y placa ", placa, ".";
+                                            Escribir "Se le informa, que de acuerdo a las observaciones dadas: ", observaciones;
+                                            Escribir "Se realizó el siguiente trabajo:";
+                                            Escribir "1. ", mantenimiento, motor, frenos, filtro, cadenamoto, novedad;
+                                            Escribir "2. ", arreglo;
+                                            Escribir "3. Y si hubo uilización de repuestos: ", repuestos;
+                                            Escribir "--------------------------------------------------------------";
+                                            Escribir "LISTO! Estamos a su servicio.";
+                                            
+                                        SiNo
+                                            Escribir "Esta moto no puede ingresar al taller EL MAQUINISTA porque no es de alto cilindraje";	
+                                        FinSi
+                                        
+                                        
+                                        
+                                        
+                                    2:
+                                        
+                                            
+                                        
+                                            Escribir "¿Cuál es el cilindraje de la moto a la cual se le dará salida del taller?";
+                                            Leer cilindraje;
+                                            
+                                            Si cilindraje >= 400 Entonces
+                                                
+                                                Escribir "¿Que marca es la moto a la cual se le dará salida?";
+                                                leer marca;
+                                                
+                                                Escribir "¿Que modelo es la moto a la cual se le dará salida?";
+                                                leer modelo;
+                                                
+                                                Escribir "¿Que placa tiene la moto a la cual se le dará salida?";
+                                                leer placa;
+                                                
+                                                Escribir "¿Cuál es el nombre completo del propietario de la moto?";
+                                                Leer nombre;
+                                                
+                                                Escribir "¿Hubo algun arreglo adicional hecho por parte del mecánico?";
+                                                Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                                leer respuesta_arreglo;
+                                                Limpiar Pantalla;
+                                                
+                                                Si respuesta_arreglo = Verdadero Entonces
+                                                    Escribir "Describa especificamente que arreglos necesitó";
+                                                    leer arreglo;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Escribir "Al realizar el arreglo, ¿Necesitó hacer uso de repuestos?";
+                                                    Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                                    Leer respuesta_repuestos;
+                                                    Escribir "--------------------------------------------------------------";
+                                                    
+                                                    Si respuesta_repuestos = Verdadero Entonces
+                                                        Escribir "Mencione los respuestos utilizados para el arreglo";
+                                                        leer repuestos;
+                                                        Escribir "--------------------------------------------------------------";
+                                                        Escribir "Motocicleta lista para darle salida";
+                                                    SiNo
+                                                        Escribir "Motocicleta lista para darle salida";
+                                                    FinSi
+                                                    
+                                                SiNo
+                                                    Escribir "Motocicleta lista para darle salida";
+                                                FinSi
+                                                
+                                                Escribir "----------------------------------------------------------------------------------";
+                                                
+                                                Escribir "Al propietario ", nombre, " de la moto de marca ", marca, " modelo ", modelo, " con cilindraje de ", cilindraje, " y placa ", placa, ".";
+                                                Escribir "Se le informa, que de acuerdo a las observaciones dadas y al darle salida a la moto se encontro lo siguiente: ";
+                                                Escribir "- ", arreglo, "...LISTO";
+                                                Escribir "- ", repuestos, "...LISTO";
+                                                Escribir "--------------------------------------------------------------";
+                                                Escribir "Estamos a su servicio.";
+                                                
+                                            SiNo
+                                                Escribir "Esta moto no pudo haber ingresado al taller, por lo tanto no se le puede indicar salida, así que por favor revisar el proceso";
+                                            FinSi
+                                            
+                                    De Otro Modo:
+                                        Escribir "Opción incorrecta. Elija una opción que esté dentro del menú";
+                                FinSegun
+                                
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC 
+                        (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada 
+                        persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y 
+                        establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto7_Condicionales
+	
+                                Definir nombre Como Caracter;
+                                Definir documento Como Entero;
+                                Definir cedula Como Entero;
+                                Definir tarjetaidentidad Como Entero;
+                                Definir pasaporte Como Caracter;
+                                Definir otroid Como Caracter;
+                                Definir peso Como Real;
+                                Definir estatura Como Real;
+                                Definir IMC Como Real;
+                                
+                                cedula <- 0;
+                                tarjetaidentidad <- 0;
+                                pasaporte <- "";
+                                otroid <- "";
+                            
+                                
+                                Escribir "SECRETARÍA DE SALUD MUNICIPAL";
+                                Escribir "------------------------------------";
+                                Escribir "¿Cual es su nombre completo?";
+                                Leer nombre;
+                                
+                                Escribir "¿Que tipo de documento posee?";
+                                Escribir "1. Cedula de Ciudadanía";
+                                Escribir "2. Tarjeta de Identidad";
+                                Escribir "3. Pasaporte";
+                                Leer documento;
+                                
+                                Segun documento Hacer
+                                    1:
+                                        Escribir "Escriba su número de cédula";
+                                        Leer cedula;
+                                    2:
+                                        Escribir "Escriba su numero de tarjeta de identidad";
+                                        Leer tarjetaidentidad;
+                                    3:
+                                        Escribir "Escriba su número de pasaporte";
+                                        Leer pasaporte;
+                                    De Otro Modo:
+                                        Escribir "Si posee algun otro ID, escríbalo por favor";
+                                        leer otroid;
+                                FinSegun
+                                
+                                Escribir "¿Cuál es tu peso en Kilogramos?";
+                                Leer peso;
+                                
+                                Escribir "¿Cuál es tu estatura en metros?";
+                                Escribir "(Separe el decimal por medio de un punto)";
+                                Leer estatura;
+                                
+                                IMC <- peso/(estatura)^2;
+                                
+                                Escribir "------------------------------------------------------------------------";
+                                
+                                Escribir "Su Índice de Masa Corporal (IMC) es: ", IMC;
+                                
+                                Si IMC < 18.5 Entonces
+                                    Escribir nombre, " su IMC está por debajo de lo normal, así que usted se encuentra con bajo peso.";
+                                SiNo
+                                    Si (IMC >= 18.5 Y IMC <= 24.9) Entonces
+                                        Escribir nombre, " su IMC se encuentra en un rango normal, así que usted se encuentra en un peso normal.";
+                                    FinSi
+                                    
+                                    Si (IMC >= 25.0 Y IMC <= 29.9) Entonces
+                                        Escribir nombre, " su IMC se encuentra por encima de lo normal, así que usted se encuentra en sobrepeso.";
+                                    FinSi
+                                    
+                                    Si IMC >= 30.0 Entonces
+                                        Escribir nombre, " ALERTA! usted se encuentra en estado de obesidad.";
+                                    FinSi
+                                FinSi
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita 
+                        registrar los pedidos de los clientes en cuanto a las tortas que realiza. 
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). 
+                        Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas 
+                        que se registren diariamente.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto8_Condicionales
+	
+                                Definir nombre Como Caracter;
+                                Definir sabor Como Caracter;
+                                Definir porcion Como Entero;
+                                Definir decoracion Como Entero;
+                                Definir cumpleanos Como Caracter;
+                                Definir grados Como Caracter;
+                                Definir boda Como Caracter;
+                                Definir comunion Como Caracter;
+                                Definir personalizar Como Caracter;
+                                Definir pago Como Entero;
+                                
+                                cumpleanos <- "";
+                                grados <- "";
+                                boda <- "";
+                                comunion <- "";
+                                personalizar <-"";
+                                
+                                Escribir "PASTELERÍA DON CARLOS";
+                                
+                                Escribir "Para realizar su pedido, por favor digite su nombre completo";
+                                Leer nombre;
+                                
+                                Escribir "A continuación podrá elegir la torta del sabor que desee, porciones y decoración";
+                                Escribir "¿Que sabor de torta prefiere? (Escriba el sabor que desee)";
+                                Escribir "1. Chocolate";
+                                Escribir "2. Vainilla";
+                                Escribir "3. Milo";
+                                Escribir "4. Cheesecake";
+                                Escribir "5. Combinada (Vainilla y Chocolate)";
+                                
+                                Leer sabor;
+                                
+                            
+                                Escribir "¿De cuántas porciones desee que sea su torta? (Escriba el número acorde a las porciones que necesite)";
+                                Leer porcion;
+                                Si porcion > 50 Entonces
+                                    Escribir "En el momento no tenemos disponible tortas de más de 50 porciones.";
+                                SiNo
+                                    Escribir "Perfecto! se añadirá a su pedido";
+                                FinSi
+                                
+                                Escribir "---------------------------------------------------------------------";
+                                Escribir "¿Que tipo de decoración deseas para tu torta? (Elije el número de acuerdo a la torta que quieres)";
+                                Escribir "1. Cumpleaños";
+                                Escribir "2. Grados";
+                                Escribir "3. Boda";
+                                Escribir "4. Primera Comunión";
+                                Escribir "5. Personalizada";
+                                Leer decoracion;
+                                
+                                Segun decoracion Hacer
+                                    1:
+                                        Escribir "Especifica como quisieras la torta tipo cumpleaños";
+                                        Leer cumpleanos;
+                                    2:
+                                        Escribir "Especifica como quisieras la torta tipo grados";
+                                        Leer grados;
+                                    3:
+                                        Escribir "Especifica como quisieras la torta tipo boda";
+                                        Leer boda;
+                                    4:
+                                        Escribir "Especifica como quisieras la torta tipo primera comunión";
+                                        Leer comunion;
+                                    De Otro Modo:
+                                        Escribir "Especifica como quisieras personalizar la torta";
+                                        Leer personalizar;
+                                FinSegun
+                                
+                                Escribir "Pedido realizado correctamente";	
+                                Limpiar Pantalla;
+                                
+                                Escribir "El pedido de ", nombre, " quedó de la siguiente forma:";
+                                Escribir "- El sabor de torta que eligió fue: ", sabor;
+                                Escribir "- El número de porciones de la torta fue: ", porcion;
+                                Escribir "- La decoración elegida para torta fue: ", cumpleanos, grados, boda, comunion, personalizar;
+                                
+                                Escribir "----------------------------------------------------------------";
+                                
+                                Si (porcion >= 1 y porcion <= 3) Entonces
+                                    Escribir "El costo de la torta es de: $12.000";
+                                SiNo
+                                    Si (porcion >= 4 y porcion <= 7) Entonces
+                                        Escribir "El costo de la torta es de: $18.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 8 y porcion <= 11) Entonces
+                                        Escribir "El costo de la torta es de: $24.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 12 y porcion <= 15) Entonces
+                                        Escribir "El costo de la torta es de: $30.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 16 y porcion <= 19) Entonces
+                                        Escribir "El costo de la torta es de: $36.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 20 y porcion <= 23) Entonces
+                                        Escribir "El costo de la torta es de: $42.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 24 y porcion <= 27) Entonces
+                                        Escribir "El costo de la torta es de: $48.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 28 y porcion <= 31) Entonces
+                                        Escribir "El costo de la torta es de: $54.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 32 y porcion <= 35) Entonces
+                                        Escribir "El costo de la torta es de: $60.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 36 y porcion <= 39) Entonces
+                                        Escribir "El costo de la torta es de: $66.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 40 y porcion <= 43) Entonces
+                                        Escribir "El costo de la torta es de: $72.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 44 y porcion <= 47) Entonces
+                                        Escribir "El costo de la torta es de: $78.000";
+                                    FinSi
+                                    
+                                    Si (porcion >= 48 y porcion <= 50) Entonces
+                                        Escribir "El costo de la torta es de: $84.000";
+                                    FinSi
+                                    
+                                    
+                                FinSi
+                                
+                                
+                                Escribir "¿Cuál será el medio de pago?";
+                                Escribir "1. Efectivo";
+                                Escribir "2. Débito";
+                                Escribir "3. Crédito";
+                                Leer pago;
+                                
+                                Segun pago Hacer
+                                    1:
+                                        Escribir "Pago en Efectivo. EXITOSO!";
+                                    2:
+                                        Escribir "Pago en Tarjeta Débito. EXITOSO!";
+                                    3:
+                                        Escribir "Pago en Tarjeta de Crédito. EXITOSO!";
+                                    De Otro Modo:
+                                        Escribir "Pago RECHAZADO, escoja un medio de pago.";
+                                FinSegun
+                            FinProceso
+                            
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de 
+                        diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio 
+                        solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione 
+                        si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos 
+                        necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto9_Condicionales
+	
+                                Definir figura Como Entero;
+                                Definir Arectangulo Como Real;
+                                Definir Atriangulo Como Real;
+                                Definir Atrapecio Como Real;
+                                Definir b Como Real;
+                                Definir h Como Real;
+                                Definir bm Como Real;
+                                
+                                b <- 0;
+                                h <- 0;
+                                bm <- 0;
+                                
+                                Escribir "ÁREAS DE FIGURAS GEOMÉTRICAS";
+                                Escribir "-----------------------------------";
+                                Escribir "¿Cuál es el área de la figura geométrica que desea calcular?";
+                                Escribir "(Escriba el número correspondiente a la figura)";
+                                Escribir "1. Rectángulo";
+                                Escribir "2. Triángulo";
+                                Escribir "3. Trapecio";
+                                Leer figura;
+                                
+                                Escribir "-----------------------------------";
+                                Segun figura Hacer
+                                    1:
+                                        Escribir "(Escriba los valores en centímetros)";
+                                        Escribir "¿Cuánto mide la base del rectángulo?";
+                                        Leer b;
+                                        Escribir "¿Cuánto mide la altura del rectángulo?";
+                                        Leer h;
+                                        Arectangulo <- b*h;
+                                        Escribir "-----------------------------------";
+                                        Escribir "El área del restángulo según los valores ingresados, es: ", Arectangulo, " cm^2";
+                                    2:
+                                        
+                                        Escribir "(Escriba los valores en centímetros)";
+                                        Escribir "¿Cuánto mide la base del triángulo?";
+                                        Leer b;
+                                        Escribir "¿Cuánto mide la altura del triángulo?";
+                                        Leer h;
+                                        Atriangulo <- (b*h)/2;
+                                        Escribir "-----------------------------------";
+                                        Escribir "El área del triángulo según los valores ingresados, es: ", Atriangulo, " cm^2";
+                                    3:
+                                        
+                                        Escribir "(Escriba los valores en centímetros)";
+                                        Escribir "¿Cuánto mide la base mayor del trapecio?";
+                                        Leer bm;
+                                        Escribir "¿Cuánto mide la base menor del trapecio?";
+                                        Leer b;
+                                        Escribir "¿Cuánto mide la altura del trapecio?";
+                                        Leer h;
+                                        Atrapecio <- ((bm+b)*h)/2;
+                                        Escribir "-----------------------------------";
+                                        Escribir "El área calculada según los valores ingresados, es: ", Atrapecio, " cm^2";
+                                    De Otro Modo:
+                                        Escribir "Respuesta incorrecta, Elija algunas de las opciones ya dadas.";
+                                FinSegun
+                                
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas 
+                        de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. 
+                        Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. 
+                        En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser 
+                        mayor al valor que tiene en la cuenta.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto10_Condicionales
+	
+                                Definir titular1, titular2, titular3, titular4, titular5  Como Caracter;
+                                Definir cantidadT1, cantidadT2, cantidadT3, cantidadT4, cantidadT5 Como Entero;
+                                Definir nombre Como Caracter;
+                                Definir operacion Como Entero;
+                                Definir ingreso Como Entero;
+                                Definir retiro Como Entero;
+                                Definir Total Como Entero;
+                                
+                                titular1 <- "Valentina Villa Granados";
+                                titular2 <- "Alejandro Restrepo Muñoz";
+                                titular3 <- "Paula Andrea Granados Sanchez";
+                                titular4 <- "Alexander Villa Jaramillo";
+                                titular5 <- "Fernando Garcia Dominguez";
+                                
+                                cantidadT1 <- 18000000;
+                                cantidadT2 <- 23000000;
+                                cantidadT3 <- 9000000;
+                                cantidadT4 <- 5000000;
+                                cantidadT5 <- 12000000;
+                                
+                                
+                                
+                                Escribir "SU BANCO FIEL";
+                                Escribir "Digite su Nombre Completo";
+                                Leer nombre;
+                                
+                                Si nombre = titular1 Entonces
+                                    
+                                    Escribir "¿Que operación desea realizar?";
+                                    Escribir "1. Ingreso";
+                                    Escribir "2. Retiro";
+                                    Escribir "3. Consultar valor";
+                                    Leer operacion;
+                                    
+                                    Segun operacion Hacer
+                                        1:
+                                            Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                            Leer ingreso;
+                                            Si ingreso > 0 Entonces
+                                                Escribir "INGRESO EXITOSO";
+                                                Escribir "Acaba de ingresar ", ingreso, " pesos a su cuenta";
+                                                Total <- cantidadT1 + ingreso;
+                                                Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                            SiNo
+                                                Escribir "INGRESO FALLIDO";
+                                                Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                            FinSi
+                                        2:
+                                            Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                            Leer retiro;
+                                            Si retiro > cantidadT1 Entonces
+                                                Escribir "RETIRO FALLIDO";
+                                                Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                            SiNo
+                                                Escribir "RETIRO EXITOSO";
+                                                Escribir "Acaba de retirar ", retiro, " pesos de su cuenta";
+                                                Total <- cantidadT1 - retiro;
+                                                Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                            FinSi
+                                        3:
+                                            Escribir "El monto total que tiene en su cuenta es de: ", cantidadT1, " COP.";
+                                        De Otro Modo:
+                                            Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                                    FinSegun
+                                    
+                                    
+                                SiNo
+                                    Si nombre = titular2 Entonces
+                                        
+                                        Escribir "¿Que operación desea realizar?";
+                                        Escribir "1. Ingreso";
+                                        Escribir "2. Retiro";
+                                        Escribir "3. Consultar valor";
+                                        Leer operacion;
+                                        
+                                        Segun operacion Hacer
+                                            1:
+                                                Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                                Leer ingreso;
+                                                Si ingreso > 0 Entonces
+                                                    Escribir "INGRESO EXITOSO";
+                                                    Escribir "Acaba de ingresar ", ingreso, " pesos a su cuenta";
+                                                    Total <- cantidadT2 + ingreso;
+                                                    Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                                SiNo
+                                                    Escribir "INGRESO FALLIDO";
+                                                    Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                                FinSi
+                                            2:
+                                                Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                                Leer retiro;
+                                                Si retiro > cantidadT2 Entonces
+                                                    Escribir "RETIRO FALLIDO";
+                                                    Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                                SiNo
+                                                    Escribir "RETIRO EXITOSO";
+                                                    Escribir "Acaba de retirar ", retiro, " pesos de su cuenta";
+                                                    Total <- cantidadT2 - retiro;
+                                                    Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                                FinSi
+                                            3:
+                                                Escribir "El monto total que tiene en su cuenta es de: ", cantidadT2, " COP.";
+                                            De Otro Modo:
+                                                Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                                        FinSegun
+                                        
+                                    SiNo
+                                        Si nombre = titular3 Entonces
+                                        
+                                            Escribir "¿Que operación desea realizar?";
+                                            Escribir "1. Ingreso";
+                                            Escribir "2. Retiro";
+                                            Escribir "3. Consultar valor";
+                                            Leer operacion;
+                                            
+                                            Segun operacion Hacer
+                                                1:
+                                                    Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                                    Leer ingreso;
+                                                    Si ingreso > 0 Entonces
+                                                        Escribir "INGRESO EXITOSO";
+                                                        Escribir "Acaba de ingresar ", ingreso, " pesos a su cuenta";
+                                                        Total <- cantidadT3 + ingreso;
+                                                        Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                                    SiNo
+                                                        Escribir "INGRESO FALLIDO";
+                                                        Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                                    FinSi
+                                                2:
+                                                    Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                                    Leer retiro;
+                                                    Si retiro > cantidadT3 Entonces
+                                                        Escribir "RETIRO FALLIDO";
+                                                        Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                                    SiNo
+                                                        Escribir "RETIRO EXITOSO";
+                                                        Escribir "Acaba de retirar ", retiro, " pesos de su cuenta";
+                                                        Total <- cantidadT3 - retiro;
+                                                        Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                                    FinSi
+                                                3:
+                                                    Escribir "El monto total que tiene en su cuenta es de: ", cantidadT3, " COP.";
+                                                De Otro Modo:
+                                                    Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                                            FinSegun
+                                            
+                                        SiNo
+                                            Si nombre = titular4 Entonces
+                                                Escribir "¿Que operación desea realizar?";
+                                                Escribir "1. Ingreso";
+                                                Escribir "2. Retiro";
+                                                Escribir "3. Consultar valor";
+                                                Leer operacion;
+                                                
+                                                Segun operacion Hacer
+                                                    1:
+                                                        Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                                        Leer ingreso;
+                                                        Si ingreso > 0 Entonces
+                                                            Escribir "INGRESO EXITOSO";
+                                                            Escribir "Acaba de ingresar ", ingreso, " pesos a su cuenta";
+                                                            Total <- cantidadT4 + ingreso;
+                                                            Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                                        SiNo
+                                                            Escribir "INGRESO FALLIDO";
+                                                            Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                                        FinSi
+                                                    2:
+                                                        Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                                        Leer retiro;
+                                                        Si retiro > cantidadT4 Entonces
+                                                            Escribir "RETIRO FALLIDO";
+                                                            Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                                        SiNo
+                                                            Escribir "RETIRO EXITOSO";
+                                                            Escribir "Acaba de retirar ", retiro, " pesos de su cuenta";
+                                                            Total <- cantidadT4 - retiro;
+                                                            Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                                        FinSi
+                                                    3:
+                                                        Escribir "El monto total que tiene en su cuenta es de: ", cantidadT4, " COP.";
+                                                    De Otro Modo:
+                                                        Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                                                FinSegun
+                                                
+                                            SiNo
+                                                Si nombre = titular5 Entonces
+                                                    Escribir "¿Que operación desea realizar?";
+                                                    Escribir "1. Ingreso";
+                                                    Escribir "2. Retiro";
+                                                    Escribir "3. Consultar valor";
+                                                    Leer operacion;
+                                                    
+                                                    Segun operacion Hacer
+                                                        1:
+                                                            Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                                            Leer ingreso;
+                                                            Si ingreso > 0 Entonces
+                                                                Escribir "INGRESO EXITOSO";
+                                                                Escribir "Acaba de ingresar ", ingreso, " pesos a su cuenta";
+                                                                Total <- cantidadT5 + ingreso;
+                                                                Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                                            SiNo
+                                                                Escribir "INGRESO FALLIDO";
+                                                                Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                                            FinSi
+                                                        2:
+                                                            Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                                            Leer retiro;
+                                                            Si retiro > cantidadT5 Entonces
+                                                                Escribir "RETIRO FALLIDO";
+                                                                Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                                            SiNo
+                                                                Escribir "RETIRO EXITOSO";
+                                                                Escribir "Acaba de retirar ", retiro, " pesos de su cuenta";
+                                                                Total <- cantidadT5 - retiro;
+                                                                Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                                            FinSi
+                                                        3:
+                                                            Escribir "El monto total que tiene en su cuenta es de: ", cantidadT5, " COP.";
+                                                        De Otro Modo:
+                                                            Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                                                    FinSegun
+                                                    
+                                                SiNo
+                                                    Escribir "Verifique la manera en la que copia su nombre. Por favor escriba su nombre completo y haga uso de las mayúsculas iniciales";
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            
+                            
+                                
+                            FinProceso
+                             
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+        </ol>
+    </div>
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Dw0l5qNFjkM" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>

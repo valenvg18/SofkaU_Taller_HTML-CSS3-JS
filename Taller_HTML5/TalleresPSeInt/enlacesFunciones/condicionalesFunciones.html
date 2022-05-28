@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales - Funciones</title>
+    <link rel="stylesheet" href="CSSfunciones/estilosFunciones.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>TALLER CONDICIONALES MODO FUNCIONES</h1>
+        
+    </header>
+
+    <div class="contenedor-lista">
+        <ol>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite la edad de una persona. 
+                        Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h3>
+                    <div class="codigo">
+                        <p>Estará unido al siguiente punto</p>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite la edad de una persona. 
+                        Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto1y2_Condicionales_Funciones
+                                Definir edad Como Entero;
+                                edad <- capturar(0);
+                            FinProceso
+                            
+                            SubProceso dato <- capturar(edad)
+                                Definir dato Como Entero;
+                                
+                                Escribir "¿Que edad tienes?";
+                                Leer dato;
+                                
+                                Si dato >= 18 Entonces
+                                    Escribir "Usted es mayor de edad";
+                                SiNo
+                                    Escribir "Usted aún es un niño(a)";
+                                FinSi
+                            FinSubProceso
+                                
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. 
+                        Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla 
+                        [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. 
+                        Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: 
+                        [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto3_Condicionales_Funciones
+	
+                                Definir nombre Como Caracter;
+                                Definir apellidos Como Caracter;
+                                Definir edad Como Entero;
+                                
+                                nombre <- captura ("¿Cuál es tu nombre?");
+                                
+                                apellidos <- captura ("Cuáles son tus apellidos?");
+                                
+                                edad <- capturar(0);
+                                
+                                Si edad >= 18 Entonces
+                                    Escribir nombre, " ", apellidos, " Usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+                                SiNo
+                                    Escribir nombre, " ", apellidos, " Usted es menor de edad, por lo tanto no puede entrar a la fiesta. Por favor devuélvase a su casa"; 
+                                FinSi
+                            FinProceso
+                            
+                            SubProceso dato <- captura (mensaje)
+                                Definir dato Como Caracter;
+                                Escribir mensaje;
+                                Leer dato;
+                            FinSubProceso
+                            
+                            SubProceso edad <- capturar(dato)
+                                Definir edad Como Entero;
+                                Escribir "¿Cuál es tu edad?";
+                                leer edad;
+                                
+                                
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio 
+                        el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que 
+                        adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, 
+                        consultar películas disponibles y recibir película en la video tienda con la opción de realizar 
+                        anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto4_Condicionales_Funciones
+	
+                                Definir nombre Como Caracter;
+                                Definir opcion Como Entero;
+                                Definir pelicula Como Entero;
+                                Definir sugerencia Como Caracter;
+                                
+                                nombre <- capturar("¿Cuál es tu nombre?");
+                                Limpiar Pantalla;
+                                
+                                Escribir "Bienvenid@ ", nombre, " a la video tienda del Porvenir";
+                                
+                                opcion <- elegir_Opcion_Menu();
+                                Limpiar Pantalla;
+                                
+                                Segun opcion Hacer
+                                    1:
+                                        Escribir "Las peliculas disponibles en la video tienda son: "; 
+                                        imprimir_Peliculas;
+                                    2:
+                                        pelicula <- imprimir_accion("¿Cuál pelicula deseas alquilar?", "Alquilaste ", "Esa pelicula no esta disponible para ser alquilada");
+                                        
+                                    3:
+                                        pelicula <- imprimir_accion("¿Cuál pelicula deseas entregar?", "Entregaste ", "Esa pelicula no hace parte de nuestra video tienda");
+                                        
+                                        Escribir "-----------------------------------------------------------------";
+                                        sugerencia <- escribir_Sugerencia("Escribir tu sugerencia o novedad");
+                                        
+                                        
+                                    De Otro Modo:
+                                        Escribir "La opción escogida no hace parte de nuestro menú. Vuelve a intentarlo";
+                                FinSegun
+                                
+                            FinProceso
+                            
+                            SubProceso imprimir_Peliculas()
+                                Escribir "1. Los Avengers Endgame";
+                                Escribir "2. Encanto";
+                                Escribir "3. El Conjuro";
+                                Escribir "4. Matrix";
+                                Escribir "5. King Kong";
+                            FinSubProceso
+                            
+                            SubProceso nombre <- capturar(mensaje)
+                                Definir nombre Como Caracter;
+                                Escribir mensaje;
+                                Leer nombre;
+                            FinSubProceso
+                            
+                            SubProceso opcionmenu <- elegir_Opcion_Menu()
+                                Definir opcionmenu Como Entero;
+                                Escribir "Elije la opcion que deseas ver";
+                                Escribir "1. Consultar peliculas disponibles";
+                                Escribir "2. Alquilar pelicula";
+                                Escribir "3. Entregar pelicula";
+                                Leer opcionmenu;
+                            FinSubProceso
+                            
+                            SubProceso sugerencia <- escribir_Sugerencia(mensaje)
+                                Definir sugerencia, novedad Como Caracter;
+                                
+                                Escribir "¿Tienes alguna sugerencia o novedad frente a la pelicula alquilada o el servicio prestado?";
+                                Escribir "Escribir Si o No según el caso";
+                                Leer  sugerencia;
+                                
+                                Limpiar Pantalla;
+                                Si sugerencia = "si" Entonces
+                                    Escribir mensaje;
+                                    leer novedad;
+                                    Escribir "LO TENDREMOS EN CUENTA! GRACIAS POR UTILIZAR NUESTROS SERVICIOS";
+                                    
+                                SiNo
+                                    Escribir "GRACIAS POR UTILIZAR NUESTROS SERVICIOS";
+                                FinSi
+                                
+                            FinSubProceso
+                            
+                            SubProceso retorno <- imprimir_accion(mensaje, mensaje1, mensaje2)
+                                Definir retorno Como Entero;
+                                Definir p1, p2, p3, p4, p5 Como Caracter;
+                                
+                                P1 <- "Los Avengers Endgame";
+                                P2 <- "Encanto";
+                                P3 <- "El Conjuro";
+                                P4 <- "Matrix";
+                                P5 <- "King Kong";
+                                
+                                Escribir mensaje;
+                                imprimir_Peliculas;
+                                Leer retorno;
+                                Limpiar Pantalla;
+                                
+                                Segun retorno Hacer
+                                    1:
+                                        Escribir mensaje1, P1;
+                                    2:
+                                        Escribir mensaje1, P2;
+                                    3:
+                                        Escribir mensaje1, P3;
+                                    4: 
+                                        Escribir mensaje1, P4;
+                                    5:
+                                        Escribir mensaje1, P5;
+                                    De Otro Modo:
+                                        Escribir mensaje2;
+                                FinSegun
+                            FinSubProceso
+                            
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para 
+                        poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas 
+                        características que deben indicársele al cliente para que pueda escoger el producto a comprar. 
+                        Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto 
+                        y devoluciones en caso de que se presenten.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto5_Condicionales_Funciones
+                                Definir categoriaproducto Como Entero;
+                                Definir medicamentos como Entero; 
+                                Definir Advil, Dolex, Pax, Acetaminofen, Noxpirin, Ibuprofeno, Desodorante, Shampoo Como Caracter;
+                                Definir solicitud Como entero;
+                                Definir devolucion Como Entero;
+                                
+                                Advil <- "$13.000";
+                                Dolex <- "$16.000";
+                                Pax <- "$3.000";
+                                Acetaminofen <- "$10.000";
+                                Noxpirin <- "$14.000";
+                                Ibuprofeno <- "$6.000";
+                                Desodorante <- "$11.000";
+                                Shampoo <- "$20.000";
+                                
+                                Escribir "BIENVENIDO A LA DROGUERÍA MI SALUD";
+                                Escribir "--------------------------------------------";
+                                
+                                solicitud <- capturar_respuesta("Comprar un medicamento o producto", "Devolución de un producto");
+                                Limpiar Pantalla;
+                                
+                                Si solicitud = 1 Entonces
+                                    
+                                    categoriaproducto <- elegir_categoria_del_producto("Medicamentos para ");
+                                    
+                                    Segun categoriaproducto Hacer
+                                        1:
+                                            medicamentos <- comprarMedicamento("Advil", "Dolex", Advil, Dolex);
+                                        2:
+                                            medicamentos <- comprarMedicamento("Pax", "Noxpirin", Pax, Noxpirin);
+                                        3:
+                                            medicamentos <- comprarMedicamento("Acetaminofen", "Ibuprofeno", Acetaminofen, Ibuprofeno);
+                                        4: 
+                                            medicamentos <- comprarMedicamento("Desodorante", "Shampoo para el cabello", Desodorante, Shampoo);
+                                        De Otro Modo:
+                                            Escribir "Opción incorrecta. Por favor marque una opcion que este designada";
+                                    FinSegun
+                                    
+                                SiNo
+                                    Escribir "¿Cuál es el producto o medicamento que desea devolver?";
+                                    Escribir "1. Advil";
+                                    Escribir "2. Dolex";
+                                    Escribir "3. Pax";
+                                    Escribir "4. Noxpirin";
+                                    Escribir "5. Acetaminofen";
+                                    Escribir "6. Ibuprofeno";
+                                    Escribir "7. Desodorante";
+                                    Escribir "8. Shampoo para el Cabello";
+                                    
+                                    leer devolucion;
+                                    Escribir "------------------------------------------------------------------------";
+                                    Segun devolucion Hacer
+                                        1:
+                                            imprimirDevolucion("Advil");
+                                        2:
+                                            imprimirDevolucion("Dolex");
+                                        3:
+                                            imprimirDevolucion("Pax");
+                                        4:
+                                            imprimirDevolucion("Noxpirin");
+                                        5:
+                                            imprimirDevolucion("Acetaminofen");
+                                        6:
+                                            imprimirDevolucion("Ibuprofeno");
+                                        7:
+                                            imprimirDevolucion("Desodorante");
+                                        8:
+                                            imprimirDevolucion("Shampoo");
+                                            
+                                        De Otro Modo:
+                                            Escribir "Devolución no válida";
+                                            
+                                    FinSegun
+                                FinSi
+                                
+                            FinProceso
+                            
+                            SubProceso respuesta <- capturar_respuesta(mensaje1, mensaje2)
+                                Definir respuesta Como Entero;
+                                Escribir "¿Cuál es la soliciud que desea realizar?";
+                                Escribir "1. ", mensaje1;
+                                Escribir "2. ", mensaje2;
+                                leer respuesta;
+                            FinSubProceso
+                            
+                            SubProceso categoria <- elegir_categoria_del_producto(mensaje)
+                                Definir categoria Como Entero;
+                                Definir M1, M2, M3, M4 Como Caracter;
+                                M1 <- "el dolor de cabeza";
+                                M2 <- "la gripa";
+                                M3 <- "el malestar general";
+                                M4 <- "la higiene personal";
+                                
+                                Escribir "¿Que categoría de productos quisieras ver?";
+                                Escribir "(Elije 1, 2, 3 o 4 según el caso)";
+                                Escribir "1. ", mensaje, M1;
+                                Escribir "2. ", mensaje, M2;
+                                Escribir "3. ", mensaje, M3;
+                                Escribir "4. Productos para ", M4;
+                                
+                                leer categoria;
+                                Limpiar Pantalla;
+                                
+                            FinSubProceso
+                            
+                            SubProceso medicamento <- comprarMedicamento(medicamento1, medicamento2, precioM1, precioM2)
+                                
+                                Definir medicamento Como Entero;
+                                Definir precioMedicamento Como Caracter;
+                                Definir M1, M2, M3, M4 Como Caracter;
+                                M1 <- "el dolor de cabeza";
+                                M2 <- "la gripa";
+                                M3 <- "el malestar general";
+                                M4 <- "la higiene personal";
+                                
+                                Escribir "Los medicamentos disponibles para ", M1, " son:";
+                                Escribir "1. ", medicamento1;
+                                Escribir "2. ", medicamento2;
+                                Escribir "Si deseas comprar alguno de estos productos, escribe 1 o 2 según el que necesites";
+                                leer medicamento;
+                                Limpiar Pantalla;
+                                
+                                Segun medicamento Hacer
+                                    1:
+                                        Escribir "El precio del ", medicamento1, " es: ", precioM1;
+                                        Escribir "-------------------------------------------------";
+                                        Escribir "¿Deseas comprarlo?";
+                                        leer precioMedicamento;
+                                        Si (precioMedicamento = "si") o (precioMedicamento = "Si")  Entonces
+                                            Escribir "HECHO! Producto comprado";
+                                        SiNo
+                                            Escribir "Puedes mirar otros productos";
+                                        FinSi
+                                    2:
+                                        Escribir "El precio del ", medicamento2 ," es: ", precioM2;
+                                        Escribir "-------------------------------------------------";
+                                        Escribir "¿Deseas comprarlo?";
+                                        leer precioMedicamento;
+                                        Si (precioMedicamento = "si") o (precioMedicamento = "Si")  Entonces
+                                            Escribir "HECHO! Producto comprado";
+                                        SiNo
+                                            Escribir "Puedes mirar otros productos";
+                                        FinSi
+                                    De Otro Modo:
+                                        Escribir "No tenemos ese medicamento en stock";
+                                FinSegun
+                            FinSubProceso
+                            
+                            SubProceso imprimirDevolucion(medicamento)
+                                Escribir medicamento, " en proceso de devolución, en unos instantes le daremos información sobre su solicitud. GRACIAS";
+                            FinSubProceso
+                                
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las 
+                        respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. 
+                        Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                        También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera 
+                        inventariar cambios repuestos en la motocicleta al entregarla.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto6_Condicionales_Funciones
+	
+                                Definir solicitud Como Entero;
+                                Definir cilindraje Como Entero;
+                                Definir marca Como Caracter;
+                                Definir modelo Como Caracter;
+                                Definir placa Como Caracter;
+                                Definir nombre Como Caracter;
+                                Definir observaciones Como Caracter;
+                                Definir razon Como Entero;
+                                Definir respuesta Como Logico;
+                                Definir mantenimiento Como Caracter;
+                                Definir motor Como Caracter;
+                                Definir frenos Como Caracter;
+                                Definir filtro Como Caracter;
+                                Definir cadenamoto Como Caracter;
+                                Definir salida Como Logico;
+                                Definir respuesta_arreglo Como Logico;
+                                Definir respuesta_repuestos Como Logico;
+                                Definir arreglo Como Caracter;
+                                Definir repuestos Como Caracter;
+                                Definir novedad Como Caracter;
+                                Definir mg, pm, pfre, pfil, pc Como Caracter;
+                                
+                                mantenimiento <- "";
+                                motor <- "";
+                                frenos <- "";
+                                filtro <- "";
+                                cadenamoto <- "";
+                                novedad <- "";
+                                arreglo <- "";
+                                repuestos <- "";
+                                respuesta <- Falso;
+                                respuesta_arreglo <- Falso;
+                                salida <- Falso;
+                                
+                                
+                                mg <- "Mantenimiento general";
+                                pm <- "Problema en el motor";
+                                pfre <- "Problemas con los frenos o cambio de pastas";
+                                pfil <- "Problema con el filtro o cambio de este";
+                                pc <- "Problema en la cadena";
+                                
+                                Escribir "TALLER DE MOTOS EL MAQUINISTA";
+                                Escribir "--------------------------------------";
+                                Escribir "¿Que solicitud desea realizar?";
+                                Escribir "1. Moto para ingresar al taller";
+                                Escribir "2. Moto para darle salida del taller";
+                                leer solicitud;
+                                Limpiar Pantalla;
+                                
+                                Segun solicitud Hacer
+                                    1:
+                                        cilindraje <- saberCilindraje();
+                                        Si cilindraje >= 400 Entonces
+                                            Escribir "¿Que marca es la moto a ingresar?";
+                                            leer marca;
+                                            
+                                            Escribir "¿Que modelo es la moto a ingresar?";
+                                            leer modelo;
+                                            
+                                            Escribir "¿Que placa tiene la moto a ingresar?";
+                                            leer placa;
+                                            
+                                            Escribir "¿Cuál es el nombre completo del propietario de la moto?";
+                                            Leer nombre;
+                                            Limpiar Pantalla;
+                                            
+                                            Escribir "¿Cuáles fueron las observaciones por parte del propietario de la moto?";
+                                            Leer observaciones;
+                                            Escribir "--------------------------------------------------------------------------";
+                                            
+                                            Escribir "Según las observaciones del propietario, la razón por la cual la moto ingreso al taller, se puede clasificar como:";
+                                            Escribir "1. ", mg;
+                                            Escribir "2. ", pm;
+                                            Escribir "3. ", pfre;
+                                            Escribir "4. ", pfil;
+                                            Escribir "5. ", pc;
+                                            Leer razon;
+                                            Limpiar Pantalla;
+                                            
+                                            Segun razon Hacer
+                                                1:
+                                                    respuesta <- capturarRespuesta(mg);
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        mantenimiento <- especificarProblema("Describa el mantenimiento general que se le realizará a la moto");
+                                                    SiNo
+                                                        capturarNovedad();
+                                                    FinSi
+                                                2:
+                                                    respuesta <- capturarRespuesta(pm);
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        motor <- especificarProblema("Describa el daño del motor que presentaba la moto");
+                                                    SiNo
+                                                        capturarNovedad();
+                                                    FinSi
+                                                3:
+                                                    respuesta <- capturarRespuesta(pfre);
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        frenos <- especificarProblema("Especificar el problema de frenos detectado en la moto o si es referente al cambio de pastas, especificar la cantidad cambiada y por cuales se cambio");
+                                                    SiNo
+                                                        capturarNovedad();
+                                                    FinSi
+                                                4:
+                                                    respuesta <- capturarRespuesta(pfil);
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        filtro <- especificarProblema("Especificar las anomalias que se presentaron con el filtro o especificar si fue cambio de este");
+                                                    SiNo
+                                                        capturarNovedad();
+                                                    FinSi
+                                                5:
+                                                    respuesta <- capturarRespuesta(pc);
+                                                    Escribir "--------------------------------------------------------------";
+                                                    Si respuesta = Verdadero Entonces
+                                                        cadenamoto <- especificarProblema("Describa el problema presentado en la cadena");
+                                                    SiNo
+                                                        capturarNovedad();
+                                                    FinSi
+                                                De Otro Modo:
+                                                    Escribir "Eligió una opción incorrecta. Intente de nuevo.";
+                                            FinSegun
+                                            
+                                            Escribir "¿Desea darle salida a la moto?";
+                                            Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                            Leer salida;
+                                            Limpiar Pantalla;
+                                            
+                                            Si salida = Verdadero Entonces
+                                                
+                                                respuesta_arreglo <- preguntar_arreglo();
+                                                Limpiar Pantalla;
+                                                
+                                                Si respuesta_arreglo = Verdadero Entonces
+                                                    arreglo <- especificarArreglo();
+                                                    respuesta_repuestos <- necesitarRepuestos();
+                                                    
+                                                    Si respuesta_repuestos = Verdadero Entonces
+                                                        repuestos <- mencionarRepuestos();
+                                                    SiNo
+                                                        Escribir "Motocicleta lista para darle salida";
+                                                    FinSi
+                                                    
+                                                SiNo
+                                                    Escribir "Motocicleta lista para darle salida";
+                                                FinSi
+                                                
+                                                
+                                                
+                                            SiNo
+                                                Escribir "Motocicleta lista para darle salida";
+                                            FinSi
+                                            
+                                            Escribir "--------------------------------------------------------------";
+                                            Escribir "Al propietario ", nombre, " de la moto de marca ", marca, " modelo ", modelo, " con cilindraje de ", cilindraje, " y placa ", placa, ".";
+                                            Escribir "Se le informa, que de acuerdo a las observaciones dadas: ", observaciones;
+                                            Escribir "Se realizó el siguiente trabajo adicional:";
+                                            Escribir "1. ", mantenimiento, motor, frenos, filtro, cadenamoto, novedad;
+                                            Escribir "2. ", arreglo;
+                                            Escribir "3. Y si hubo uilización de repuestos: ", repuestos;
+                                            Escribir "--------------------------------------------------------------";
+                                            Escribir "LISTO! Estamos a su servicio.";
+                                            
+                                        SiNo
+                                            Escribir "Esta moto no puede ingresar al taller EL MAQUINISTA";
+                                        FinSi
+                                    2:
+                                        cilindraje <- saberCilindraje();
+                                        Si cilindraje >= 400 Entonces
+                                            
+                                            Escribir "¿Que marca es la moto a la cual se le dará salida?";
+                                            leer marca;
+                                            
+                                            Escribir "¿Que modelo es la moto a la cual se le dará salida?";
+                                            leer modelo;
+                                            
+                                            Escribir "¿Que placa tiene la moto a la cual se le dará salida?";
+                                            leer placa;
+                                            
+                                            Escribir "¿Cuál es el nombre completo del propietario de la moto?";
+                                            Leer nombre;
+                                            
+                                            respuesta_arreglo <- preguntar_arreglo();
+                                            
+                                            Si respuesta_arreglo = Verdadero Entonces
+                                                arreglo <- especificarArreglo();
+                                                respuesta_repuestos <- necesitarRepuestos();
+                                                
+                                                Si respuesta_repuestos = Verdadero Entonces
+                                                    repuestos <- mencionarRepuestos();
+                                                SiNo
+                                                    Escribir "Motocicleta lista para darle salida";
+                                                    
+                                                FinSi
+                                                
+                                            SiNo
+                                                Escribir "Motocicleta lista para darle salida";
+                                            FinSi
+                                            
+                                            Escribir "--------------------------------------------------------------";
+                                            Escribir "Al propietario ", nombre, " de la moto de marca ", marca, " modelo ", modelo, " con cilindraje de ", cilindraje, " y placa ", placa, ".";
+                                            Escribir "Se le informa, que de acuerdo a las observaciones dadas y al darle salida a la moto se encontro lo siguiente: ";
+                                            Escribir "- ", arreglo, "...LISTO";
+                                            Escribir "- ", repuestos, "...LISTO";
+                                            Escribir "--------------------------------------------------------------";
+                                            Escribir "Estamos a su servicio.";
+                                            
+                                        SiNo
+                                            Escribir "Esta moto no pudo haber ingresado al taller, por lo tanto no se le puede indicar salida, así que por favor revisar el proceso";
+                                        FinSi
+                                        
+                                    De Otro Modo:
+                                        Escribir "Opción incorrecta. Elija una opción que esté dentro del menú";
+                                FinSegun
+                                
+                            FinProceso
+                            
+                            SubProceso cilindraje <- saberCilindraje()
+                                Definir cilindraje Como Entero;
+                                Escribir "¿Cuál es el cilindraje de la moto que se va a ingresar?";
+                                Leer cilindraje;
+                            FinSubProceso
+                            
+                            SubProceso respuesta <- capturarRespuesta(problema)
+                                Definir respuesta Como Logico;
+                                
+                                Escribir "¿La moto solo necesitó ", problema, " ?";
+                                Escribir "(Responder Verdadero o Falso según el caso)";
+                                leer respuesta;
+                            FinSubProceso
+                            
+                            SubProceso  capturarNovedad()
+                                Definir novedad Como Caracter;
+                                Escribir "Describa la novedad encontrada en la motocicleta";
+                                Leer novedad;
+                                Escribir "--------------------------------------------------------------";
+                                Escribir "Guardado en el sistema";
+                            FinSubProceso
+                            
+                            SubProceso problemaMoto <- especificarProblema(descripcion)
+                                Definir problemaMoto Como Caracter;
+                                Escribir descripcion;
+                                leer problemaMoto;
+                                Escribir "--------------------------------------------------------------";
+                                Escribir "Guardado en el sistema";
+                            FinSubProceso
+                            
+                            SubProceso respuesta_arreglo <- preguntar_arreglo()
+                                Definir respuesta_arreglo Como Logico;
+                                Escribir "¿Hubo algun arreglo adicional hecho por parte del mecánico?";
+                                Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                leer respuesta_arreglo;
+                            FinSubProceso
+                            
+                            SubProceso arreglo <- especificarArreglo()
+                                Definir arreglo Como Caracter;
+                                Escribir "Describa especificamente que arreglos necesitó";
+                                leer arreglo;
+                                Escribir "--------------------------------------------------------------";
+                            FinSubProceso
+                            
+                            SubProceso respuesta_repuestos <- necesitarRepuestos()
+                                Definir respuesta_repuestos Como Logico;
+                                Escribir "Al realizar el arreglo, ¿Necesitó hacer uso de repuestos?";
+                                Escribir "(Escribir Verdadero o Falso, según el caso)";
+                                Leer respuesta_repuestos;
+                                Escribir "--------------------------------------------------------------";
+                            FinSubProceso
+                            
+                            SubProceso repuestos <- mencionarRepuestos()
+                                Definir repuestos Como Caracter;
+                                Escribir "Mencione los respuestos utilizados para el arreglo";
+                                leer repuestos;
+                                Escribir "--------------------------------------------------------------";
+                                Escribir "Motocicleta lista para darle salida";
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC 
+                        (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada 
+                        persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y 
+                        establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto7_Condicionales_Funciones
+	
+                                Definir nombre Como Caracter;
+                                Definir documento Como Entero;
+                                Definir cedula Como Entero;
+                                Definir tarjetaidentidad Como Entero;
+                                Definir pasaporte Como Caracter;
+                                Definir otroid Como Caracter;
+                                Definir peso Como Real;
+                                Definir estatura Como Real; 
+                                Definir IMC Como Real;
+                                
+                                cedula <- 0;
+                                tarjetaidentidad <- 0;
+                                pasaporte <- "";
+                                otroid <- "";
+                                
+                                Escribir "SECRETARÍA DE SALUD MUNICIPAL";
+                                Escribir "-------------------------------------";
+                                
+                                nombre <- preguntarCaracter("¿Cual es su nombre completo?");
+                                
+                                Escribir "¿Que tipo de documento posee?";
+                                Escribir "1. Cédula de ciudadanía";
+                                Escribir "2. Tarjeta de identidad";
+                                Escribir "3. Pasaporte";
+                                Leer documento;
+                                
+                                Segun documento Hacer
+                                    1:
+                                        cedula <- preguntarEntero("Escriba su número de cédula");
+                                    2:
+                                        tarjetaidentidad <- preguntarEntero("Escriba su numero de tarjeta de identidad");
+                                    3:
+                                        pasaporte <- preguntarCaracter("Escriba su número de pasaporte");
+                                    De Otro Modo:
+                                        otroid <- preguntarCaracter("Si posee algun otro ID, escríbalo por favor");
+                                FinSegun
+                                
+                                peso <- preguntarEntero("¿Cuál es tu peso en Kilogramos?");
+                                
+                                Escribir "¿Cuál es tu estatura en metros?";
+                                Escribir "(Separe el decimal por medio de un punto)";
+                                Leer estatura;
+                                
+                                IMC <- peso/(estatura)^2;
+                                
+                                Escribir "Su Índice de Masa Corporal (IMC) es: ", IMC;
+                                
+                                Si IMC < 18.5 Entonces
+                                    Escribir nombre, " su IMC está por debajo de lo normal, así que usted se encuentra con bajo peso.";
+                                SiNo
+                                    Si (IMC >= 18.5 Y IMC <= 24.9) Entonces
+                                        Escribir nombre, " su IMC se encuentra en un rango normal, así que usted se encuentra en un peso normal.";
+                                    FinSi
+                                    
+                                    Si (IMC >= 25.0 Y IMC <= 29.9) Entonces
+                                        Escribir nombre, " su IMC se encuentra por encima de lo normal, así que usted se encuentra en sobrepeso.";
+                                    FinSi
+                                    
+                                    Si IMC >= 30.0 Entonces
+                                        Escribir nombre, " ALERTA! usted se encuentra en estado de obesidad.";
+                                    FinSi
+                                FinSi
+                                
+                            FinProceso
+                            
+                            SubProceso persona <- preguntarCaracter(pregunta)
+                                Definir persona Como Caracter;
+                                Escribir pregunta;
+                                Leer persona;
+                            FinSubProceso
+                            
+                            SubProceso persona <- preguntarEntero(pregunta)
+                                Definir persona Como Entero;
+                                Escribir pregunta;
+                                Leer persona;
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita 
+                        registrar los pedidos de los clientes en cuanto a las tortas que realiza. 
+                        Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). 
+                        Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas 
+                        que se registren diariamente.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto8_Condicionales_Funciones
+                                Definir nombre Como Caracter;
+                                Definir sabor Como Caracter;
+                                Definir porcion Como Entero;
+                                Definir decoracion Como Caracter;
+                                Definir pago Como Entero;
+                                Definir especificacionDeTorta Como Caracter;
+                                
+                                
+                                Escribir "PASTELERÍA DON CARLOS";
+                                
+                                nombre <- preguntarCaracter("Para realizar su pedido, por favor digite su nombre completo");
+                                
+                                Escribir "A continuación podrá elegir la torta del sabor que desee, porciones y decoración";
+                                sabor <- menuTipo_de_Torta("¿Que sabor de torta prefiere?", "Chocolate", "Vainilla", "Milo", "Cheesecake", "Combinada");
+                                
+                                
+                                Escribir "¿De cuántas porciones desea su torta? (Escriba el número acorde a las porciones que necesite)";
+                                Leer porcion;
+                                Si porcion > 50 Entonces
+                                    Escribir "En el momento no tenemos disponible tortas de más de 50 porciones.";
+                                SiNo
+                                    Escribir "Perfecto! se añadirá a su pedido";
+                                FinSi
+                                Escribir "---------------------------------------------------------------------";
+                                
+                                decoracion <- menuTipo_de_Torta("¿Que tipo de decoración deseas para tu torta?", "Cumpleaños", "Grados", "Boda", "Primera Comunión", "Personalizada");
+                                
+                                especificacionDeTorta <- especificarTorta(decoracion);
+                                
+                                
+                                Limpiar Pantalla;
+                                Escribir "Pedido realizado correctamente";	
+                                Escribir "----------------------------------------------------------------";
+                                
+                                Escribir "El pedido de ", nombre, " quedó de la siguiente forma:";
+                                Escribir "- El sabor de torta que eligió fue: ", sabor;
+                                Escribir "- El número de porciones de la torta fue: ", porcion;
+                                Escribir "- La decoración elegida para torta fue: ", especificacionDeTorta;
+                            ;
+                                Escribir "----------------------------------------------------------------";
+                                
+                                Si (porcion >= 1 y porcion <= 3) Entonces
+                                    imprimirPrecio(12);
+                                SiNo
+                                    Si (porcion >= 4 y porcion <= 7) Entonces
+                                        imprimirPrecio(18);
+                                    FinSi
+                                    
+                                    Si (porcion >= 8 y porcion <= 11) Entonces
+                                        imprimirPrecio(24);
+                                    FinSi
+                                    
+                                    Si (porcion >= 12 y porcion <= 15) Entonces
+                                        imprimirPrecio(30);
+                                    FinSi
+                                    
+                                    Si (porcion >= 16 y porcion <= 19) Entonces
+                                        imprimirPrecio(36);
+                                    FinSi
+                                    
+                                    Si (porcion >= 20 y porcion <= 23) Entonces
+                                        imprimirPrecio(42);
+                                    FinSi
+                                    
+                                    Si (porcion >= 24 y porcion <= 27) Entonces
+                                        imprimirPrecio(48);
+                                    FinSi
+                                    
+                                    Si (porcion >= 28 y porcion <= 31) Entonces
+                                        imprimirPrecio(54);
+                                    FinSi
+                                    
+                                    Si (porcion >= 32 y porcion <= 35) Entonces
+                                        imprimirPrecio(60);
+                                    FinSi
+                                    
+                                    Si (porcion >= 36 y porcion <= 39) Entonces
+                                        imprimirPrecio(66);
+                                    FinSi
+                                    
+                                    Si (porcion >= 40 y porcion <= 43) Entonces
+                                        imprimirPrecio(72);
+                                    FinSi
+                                    
+                                    Si (porcion >= 44 y porcion <= 47) Entonces
+                                        imprimirPrecio(78);
+                                    FinSi
+                                    
+                                    Si (porcion >= 48 y porcion <= 50) Entonces
+                                        imprimirPrecio(84);
+                                    FinSi
+                                    
+                                    
+                                FinSi
+                                
+                                Escribir "----------------------------------------------------------------";
+                                Escribir "¿Cuál será el medio de pago?";
+                                Escribir "1. Efectivo";
+                                Escribir "2. Débito";
+                                Escribir "3. Crédito";
+                                Leer pago;
+                                
+                                Segun pago Hacer
+                                    1:
+                                        Escribir "Pago en Efectivo. EXITOSO!";
+                                    2:
+                                        Escribir "Pago en Tarjeta Débito. EXITOSO!";
+                                    3:
+                                        Escribir "Pago en Tarjeta de Crédito. EXITOSO!";
+                                    De Otro Modo:
+                                        Escribir "Pago RECHAZADO, escoja un medio de pago.";
+                                FinSegun
+                                
+                            FinProceso
+                            
+                            SubProceso persona <- preguntarCaracter(pregunta)
+                                Definir persona Como Caracter;
+                                Escribir pregunta;
+                                Leer persona;
+                            FinSubProceso
+                            
+                            SubProceso torta <- especificarTorta(tipo)
+                                Definir torta Como Caracter;
+                                Escribir "Especifica como quisieras la torta tipo ", tipo;
+                                Leer torta;
+                            FinSubProceso
+                            
+                            SubProceso eleccion <- menuTipo_de_Torta(caracteristica, c1, c2, c3, c4, c5)
+                                Definir eleccion Como Caracter;
+                                Escribir caracteristica;
+                                Escribir "- ", c1;
+                                Escribir "- ", c2;
+                                Escribir "- ", c3;
+                                Escribir "- ", c4;
+                                Escribir "- ", c5;
+                                Leer eleccion;
+                            FinSubProceso
+                            
+                            SubProceso imprimirPrecio(precio)
+                                Escribir "El costo de la torta es de: $", precio, ".000";
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de 
+                        diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio 
+                        solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione 
+                        si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos 
+                        necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto9_Condicionales_Funciones
+	
+                                Definir figura Como Entero;
+                                Definir Arectangulo Como Real;
+                                Definir Atriangulo Como Real;
+                                Definir Atrapecio Como Real;
+                                Definir b Como Real;
+                                Definir h Como Real;
+                                Definir bm Como Real;
+                                
+                                b <- 0;
+                                h <- 0;
+                                bm <- 0;
+                                
+                                Escribir "ÁREAS DE FIGURAS GEOMÉTRICAS";
+                                Escribir "-----------------------------------";
+                                
+                                figura <- preguntarFigura();
+                                Escribir "-----------------------------------";
+                                
+                                Segun figura Hacer
+                                    1:
+                                        imprimirCm();
+                                        b <- medirFigura("base", "rectángulo");
+                                        h <- medirFigura("altura", "rectángulo");
+                                        Arectangulo <- b*h;
+                                        imprimirArea("rectángulo", Arectangulo);
+                                    2:
+                                        imprimirCm();
+                                        b <- medirFigura("base", "triángulo");
+                                        h <- medirFigura("altura", "triángulo");
+                                        Atriangulo <- (b*h)/2;
+                                        imprimirArea("triángulo", Atriangulo );
+                                    3:
+                                        imprimirCm();
+                                        bm <- medirFigura("base mayor", "trapecio");
+                                        b <- medirFigura("base menor", "trapecio");
+                                        h <- medirFigura("altura", "trapecio");
+                                        Atrapecio <- ((bm+b)*h)/2;
+                                        imprimirArea("trapecio", Atrapecio );
+                                    De Otro Modo:
+                                        Escribir "Respuesta incorrecta, Elija algunas de las opciones ya dadas.";
+                                FinSegun
+                                
+                            FinProceso
+                            
+                            SubProceso figura <- preguntarFigura()
+                                Definir figura Como Entero;
+                                Escribir "¿Cuál es el área de la figura geométrica que desea calcular?";
+                                Escribir "(Escriba el número correspondiente a la figura)";
+                                Escribir "1. Rectángulo";
+                                Escribir "2. Triángulo";
+                                Escribir "3. Trapecio";
+                                Leer figura;
+                            FinSubProceso
+                            
+                            SubProceso imprimirCm()
+                                Escribir "(Escriba los valores en centímetros)";
+                            FinSubProceso
+                            
+                            SubProceso imprimirArea(figura,area)
+                                Escribir "-----------------------------------";
+                                Escribir "El área del ", figura," según los valores ingresados, es: ", area, " cm^2";
+                            FinSubProceso
+                            
+                            SubProceso lados <- medirFigura(lado, figura)
+                                Definir lados Como Entero;
+                                Escribir "¿Cuánto mide la ",lado," del ", figura;
+                                Leer lados;
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+            <div class="puntoTaller">
+                <li>
+                    <h3>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas 
+                        de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. 
+                        Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. 
+                        En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser 
+                        mayor al valor que tiene en la cuenta.</h3>
+                    <div class="codigo">
+                        <pre>
+                            <code>
+                            Proceso Punto10_Condicionales_Funciones
+	
+                                Definir titular1, titular2, titular3, titular4, titular5  Como Caracter;
+                                Definir cantidadT1, cantidadT2, cantidadT3, cantidadT4, cantidadT5 Como Entero;
+                                Definir nombre Como Caracter;
+                                Definir operacion Como Entero;
+                                Definir ingreso Como Entero;
+                                Definir retiro Como Entero;
+                                
+                                titular1 <- "Valentina Villa Granados";
+                                titular2 <- "Alejandro Restrepo Muñoz";
+                                titular3 <- "Paula Andrea Granados Sanchez";
+                                titular4 <- "Alexander Villa Jaramillo";
+                                titular5 <- "Fernando Garcia Dominguez";
+                                
+                                cantidadT1 <- 18000000;
+                                cantidadT2 <- 23000000;
+                                cantidadT3 <- 9000000;
+                                cantidadT4 <- 5000000;
+                                cantidadT5 <- 12000000;
+                                
+                                Escribir "SU BANCO FIEL";
+                                Escribir "Digite su Nombre Completo";
+                                Leer nombre;
+                                
+                                Si nombre = titular1 Entonces
+                                    operacion <- elegirOperacion();
+                                    
+                                    Segun operacion Hacer
+                                        1:
+                                            ingreso <- contarDinero(cantidadT1);
+                                        2:
+                                            retiro <- retirarDinero(cantidadT1);
+                                        3:
+                                            imprimirMontoTotal(cantidadT1);
+                                        De Otro Modo:
+                                            imprimirOpcionMal();
+                                    FinSegun
+                                SiNo
+                                    Si nombre = titular2 Entonces
+                                        operacion <- elegirOperacion();
+                                        
+                                        Segun operacion Hacer
+                                            1:
+                                                ingreso <- contarDinero(cantidadT2);
+                                            2:
+                                                retiro <- retirarDinero(cantidadT2);
+                                            3:
+                                                imprimirMontoTotal(cantidadT2);
+                                            De Otro Modo:
+                                                imprimirOpcionMal();
+                                        FinSegun
+                                    SiNo
+                                        Si nombre = titular3 Entonces
+                                            operacion <- elegirOperacion();
+                                            
+                                            Segun operacion Hacer
+                                                1:
+                                                    ingreso <- contarDinero(cantidadT3);
+                                                2:
+                                                    retiro <- retirarDinero(cantidadT3);
+                                                3:
+                                                    imprimirMontoTotal(cantidadT3);
+                                                De Otro Modo:
+                                                    imprimirOpcionMal();
+                                            FinSegun
+                                        SiNo
+                                            Si nombre = titular4 Entonces
+                                                operacion <- elegirOperacion();
+                                                
+                                                Segun operacion Hacer
+                                                    1:
+                                                        ingreso <- contarDinero(cantidadT4);
+                                                    2:
+                                                        retiro <- retirarDinero(cantidadT4);
+                                                    3:
+                                                        imprimirMontoTotal(cantidadT4);
+                                                    De Otro Modo:
+                                                        imprimirOpcionMal();
+                                                FinSegun
+                                            SiNo
+                                                Si nombre = titular5 Entonces
+                                                    operacion <- elegirOperacion();
+                                                    
+                                                    Segun operacion Hacer
+                                                        1:
+                                                            ingreso <- contarDinero(cantidadT5);
+                                                        2:
+                                                            retiro <- retirarDinero(cantidadT5);
+                                                        3:
+                                                            imprimirMontoTotal(cantidadT5);
+                                                        De Otro Modo:
+                                                            imprimirOpcionMal();
+                                                    FinSegun
+                                                Sino
+                                                    Escribir "Verifique la manera en la que copia su nombre. Por favor escriba su nombre completo y haga uso de las mayúsculas iniciales";
+                                                Finsi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                                
+                            FinProceso
+                            
+                            SubProceso imprimirMontoTotal(cantidad)
+                                Escribir "El monto total que tiene en su cuenta es de: ", cantidad, " COP.";
+                            FinSubProceso
+                            
+                            SubProceso imprimirOpcionMal()
+                                Escribir "INCORRECTO! por favor ingrese una opción que se encuentre en el menú dado";
+                            FinSubProceso
+                            
+                            SubProceso respuesta <- elegirOperacion()
+                                Definir respuesta Como Entero;
+                                Escribir "¿Que operación desea realizar?";
+                                Escribir "1. Ingreso";
+                                Escribir "2. Retiro";
+                                Escribir "3. Consultar valor";
+                                Leer respuesta;
+                            FinSubProceso
+                            
+                            SubProceso ingresoDinero <- contarDinero(cantidad)
+                                Definir ingresoDinero Como Entero;
+                                Definir Total Como Entero;
+                                Escribir "¿Cuánto dinero desea ingresar a su cuenta?";
+                                Leer ingresoDinero;
+                                Si ingresoDinero > 0 Entonces
+                                    Escribir "INGRESO EXITOSO";
+                                    Escribir "Acaba de ingresar ", ingresoDinero, " pesos a su cuenta";
+                                    Total <- cantidad + ingresoDinero;
+                                    Escribir "Teniendo en cuenta el monto ingresado a la cuenta, ahora usted tiene ", Total;
+                                SiNo
+                                    Escribir "INGRESO FALLIDO";
+                                    Escribir "Debe ingresar un monto mayor a 0 pesos";
+                                FinSi
+                            FinSubProceso
+                            
+                            SubProceso retiroDinero <- retirarDinero(cantidad)
+                                Definir retiroDinero Como Entero;
+                                Definir Total Como Entero;
+                                Escribir "¿Cuánto dinero desea retirar de su cuenta?";
+                                Leer retiroDinero;
+                                Si retiroDinero > cantidad Entonces
+                                    Escribir "RETIRO FALLIDO";
+                                    Escribir "Solo puede retirar un monto igual o menor a la cantidad que tiene en su cuenta";
+                                SiNo
+                                    Escribir "RETIRO EXITOSO";
+                                    Escribir "Acaba de retirar ", retiroDinero, " pesos de su cuenta";
+                                    Total <- cantidad - retiroDinero;
+                                    Escribir "Teniendo en cuenta el monto retirado de su cuenta, usted ahora tiene ", Total;
+                                FinSi
+                            FinSubProceso
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </div>
+        </ol>
+    </div> 
+</body>
+</html>

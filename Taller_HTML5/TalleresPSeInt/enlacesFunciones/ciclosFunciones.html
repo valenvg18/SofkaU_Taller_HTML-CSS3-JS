@@ -1,522 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciclos PSeInt</title>
-    <link rel="stylesheet" href="CSSpseint/estilosPseint.css" type="text/css" />
+    <title>Ciclos - Funciones</title>
+    <link rel="stylesheet" href="CSSfunciones/estilosFunciones.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <h1>TALLER 3<br>CICLOS</h1>
+        <h1>TALLER CICLOS MODO FUNCIONES</h1>
+        
     </header>
 
     <div class="contenedor-lista">
-        <ol>
+        <ul>
             <div class="puntoTaller">
                 <li>
-                    <h3>Realizar la siguiente figura por medio del ciclo *Para*</h3>
-                    <img src="Img/arbolizquierda.PNG">
-                    <div class="codigo">
-                        <pre>
-                            <code>
-                            Proceso Punto1_Taller3
-	
-                                Definir i Como Entero;
-                                Definir asterisco Como Caracter;
-                                
-                                asterisco <- "*";
-                                
-                                Para i <- 1 Hasta 10 Con Paso 1 Hacer
-                                    Escribir asterisco;
-                                    
-                                    asterisco <- Concatenar(asterisco, "*");
-                                FinPara
-                                
-                            FinProceso  
-                            </code>
-                        </pre>
-                    </div>
-                </li>
-            </div>
-            <div class="puntoTaller">
-                <li>
-                    <h3>Realizar la siguiente figura por medio del ciclo *Mientras - Hacer*</h3>
-                    <img src="Img/arbolderecha.PNG">
-                    <div class="codigo">
-                        <pre>
-                            <code>
-                            Proceso Punto2_Taller3
-	
-                                Definir i Como Entero;
-                                Definir j Como Entero;
-                                
-                                i <- 1;
-                                
-                                
-                                Mientras i <= 10  Hacer 
-                                    j <- 1;
-                                    Mientras j <= 10 Hacer
-                                        
-                                        Si j > (10- i) Entonces
-                                            Escribir Sin Saltar "*";
-                                        SiNo
-                                            Escribir Sin Saltar " ";
-                                        FinSi
-                                        
-                                        Si j = 10 Entonces
-                                            Escribir " ";
-                                        FinSi
-                                        
-                                        j <- j+1;
-                                    FinMientras
-                                    
-                                    i <- i+1;
-                                FinMientras
-                                
-                            FinProceso
-                            
-                            </code>
-                        </pre>
-                    </div>
-                </li>
-            </div>
-            <div class="puntoTaller">
-                <li>
-                    <h3>Realizar la siguiente figura por medio del ciclo *Repetir - Hasta Que*</h3>
-                    <img src="Img/arbol.PNG">
-                    <div class="codigo">
-                        <pre>
-                            <code>
-                            Proceso Punto3_Taller3
-	
-                                Definir filas Como Entero;
-                                Definir Columnas Como Entero;
-                                Definir i Como Entero;
-                                Definir j Como Entero;
-                                
-                                filas <- 1;
-                                j <- 2;
-                                
-                                Repetir
-                                    columnas <- 0;
-                                    
-                                    
-                                    Si filas < 12 Entonces
-                                        Repetir
-                                            columnas <- columnas + 1;
-                                            
-                                            Si (columnas <= (20/2)- filas + 1) o (columnas >= (20/2)+ filas + 1) Entonces
-                                                Escribir Sin Saltar " ";
-                                            FinSi
-                                            
-                                            Si (columnas > (20/2)- filas + 1) Y (columnas < (20/2)+ filas + 1) Entonces
-                                                Escribir Sin Saltar "*";
-                                            FinSi
-                                            
-                                            Si columnas = 21 Entonces
-                                                Escribir " ";
-                                            FinSi
-                                            
-                                        Hasta Que columnas = 21;
-                                        
-                                    FinSi
-                                    
-                                    Si filas = 12 Entonces
-                                        i <- 2;
-                                        
-                                        Repetir
-                                            columnas <- columnas + 1;
-                                            
-                                            Si (columnas <= (20/2)- i + 1) o (columnas >= (20/2)+ i + 1) Entonces
-                                                Escribir Sin Saltar " ";
-                                            FinSi
-                                            
-                                            Si (columnas > (20/2)- i + 1) Y (columnas < (20/2)+ i + 1) Entonces
-                                                Escribir Sin Saltar "*";
-                                            FinSi
-                                            
-                                            Si columnas = 21 Entonces
-                                                Escribir " ";
-                                            FinSi
-                                            
-                                        Hasta Que columnas = 21;
-                                        
-                                    FinSi
-                                    
-                                    Si filas > 12 Entonces
-                                        
-                                        Repetir
-                                            columnas <- columnas + 1;
-                                            
-                                            Si (columnas <= (20/2)- j + 1) o (columnas >= (20/2)+ j + 1) Entonces
-                                                Escribir Sin Saltar " ";
-                                            FinSi
-                                            
-                                            Si (columnas > (20/2)- j + 1) Y (columnas < (20/2)+ j + 1) Entonces
-                                                Escribir Sin Saltar "*";
-                                            FinSi
-                                            
-                                            Si columnas = 21 Entonces
-                                                Escribir " ";
-                                            FinSi
-                                            
-                                        Hasta Que columnas = 21
-                                        
-                                        j <- j + 1;
-                                    FinSi
-                                    
-                                    filas <- filas + 1;
-                                Hasta Que filas = 16;
-                                
-                            FinProceso
-                            
-                             
-                            </code>
-                        </pre>
-                    </div>
-                </li>
-            </div>
-            <div class="puntoTaller">
-                <li>
-                    <h3>Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por 
-                        medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, 
-                        entonces el resultado debería ser el siguiente:
-                    </h3>
-                    <img src="Img/cuadro.PNG">
-                    <div class="codigo">
-                        <pre>
-                            <code>
-                            Proceso Punto4_Taller3
-	
-                                Definir digito Como Entero;
-                                Definir i Como Entero;
-                                
-                                Escribir "TABLAS DE MULTIPLICAR";
-                                Escribir "Bienvenido al generador de tablas de multiplicar";
-                                Escribir "Por favor indique cual tabla de multiplicar desea ver:";
-                                leer digito;
-                                
-                                Para i <- 1 Hasta 10 Con Paso 1 Hacer
-                                    
-                                    Escribir i, " x ", digito, " = ", i * digito;
-                                    
-                                FinPara
-                                
-                            FinProceso
-                            
-                            </code>
-                        </pre>
-                    </div>
-                </li>
-            </div>
-            <div class="puntoTaller">
-                <li>
-                    <h3>Utilizando el ciclo que usted desee, 
-                        crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
-                    </h3>
-                    <img src="Img/menu.PNG">
-                    <div class="codigo">
-                        <pre>
-                            <code>
-                            Proceso Punto5_Taller3
-	
-                                Definir opcion Como Entero;
-                                Definir nombre Como Caracter;
-                                
-                                Repetir
-                                    
-                                    Escribir "===============================================";
-                                    Escribir "Antes de iniciar con el menú, por favor digite su nombre: ";
-                                    Leer nombre;
-                                    
-                                    Limpiar Pantalla;
-                                    
-                                    Escribir "MENÚ DEL USUARIO";
-                                    Escribir "Indique con el numero correspondiente, la opción que desea: ";
-                                    Escribir "1. Captura nombre";
-                                    Escribir "2. Saludar persona";
-                                    Escribir "3. Salir del sistema";
-                                    Leer opcion;
-                                    
-                                    Segun opcion Hacer
-                                        1:
-                                            Escribir nombre, " su nombre ha sido capturado por el sistema";
-                                            
-                                        2:
-                                            Escribir "¡Hola ", nombre, " es un gusto enorme tenerte por acá!";
-                                            
-                                        3:
-                                            Escribir nombre, ", nos despedimos. ¡Esperamos tenerte de nuevo!";
-                                    FinSegun
-                                    
-                                Hasta Que opcion = 3;
-                                
-                            FinProceso
-                             
-                            </code>
-                        </pre>
-                    </div>
-                </li>
-            </div>
-            <div class="puntoTaller">
-                <li>
-                    <h3>Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar 
+                    <h3>Punto 6<br>
+                        Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar 
                         contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, 
-                        teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el 
-                        número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. 
-                        Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+                        teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que 
+                        el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo 
+                        requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique
                     </h3>
                     <div class="codigo">
                         <pre>
                             <code>
-                            Proceso sin_titulo
+                                Proceso Punto6_Ciclos_Funciones
 	
-                                Definir nombre1, nombre2, nombre3 Como Caracter;
-                                Definir telefono1, telefono2, telefono3 Como Real;
-                                Definir organizacion1, organizacion2, organizacion3 Como Caracter;
-                                Definir i Como Entero;
-                                Definir opcionDeBusqueda Como entero;
-                                Definir busquedaNombre, nombrecontacto como caracter;
-                                Definir busquedaTelefono Como Real;
-                                definir numeroDeTelefono Como Real;
-                                numeroDeTelefono <- 0;
-                                nombrecontacto <- "";
-                                
-                                Definir solicitud Como Entero;
-                                
-                                nombre1 <- "";
-                                nombre2 <- "";
-                                nombre3 <- "";
-                                telefono1 <- 0;
-                                telefono2 <- 0;
-                                telefono3 <- 0;
-                                organizacion1 <- "";
-                                organizacion2 <- "";
-                                organizacion3 <- "";
-                                
-                                Escribir "BIENVENIDO";
-                                
-                                Para i<-1 Hasta 3 Con Paso 1 Hacer
+                                    Definir nombre1, nombre2, nombre3 Como Caracter;
+                                    Definir telefono1, telefono2, telefono3 Como Caracter;
+                                    Definir organizacion1, organizacion2, organizacion3 Como Caracter;
+                                    Definir i Como Entero;
+                                    Definir opcionDeBusqueda Como entero;
+                                    Definir busquedaNombre, nombrecontacto como caracter;
+                                    Definir busquedaTelefono Como Caracter;
+                                    definir numeroDeTelefono Como Caracter;
+                                    numeroDeTelefono <- "";
+                                    nombrecontacto <- "";
                                     
-                                    Escribir "=======================================================";
-                                    Escribir "PARA AGREGAR CONTACTO #", i;
-                                    Escribir "-------------------------------------------------------";
-                                    Escribir "Escribe el nombre completo: ";
+                                    Definir solicitud Como Entero;
                                     
+                                    nombre1 <- "";
+                                    nombre2 <- "";
+                                    nombre3 <- "";
+                                    telefono1 <- "";
+                                    telefono2 <- "";
+                                    telefono3 <- "";
+                                    organizacion1 <- "";
+                                    organizacion2 <- "";
+                                    organizacion3 <- "";
                                     
+                                    Escribir "BIENVENIDO";
                                     
-                                    
-                                    Si nombre1 = "" Entonces
-                                        leer nombre1;
-                                    SiNo
-                                        Si nombre2= "" Entonces
-                                            leer nombre2;
-                                        SiNo
-                                            si nombre3 = "" Entonces
-                                                Leer nombre3;
-                                            FinSi
-                                        FinSi
-                                    FinSi
-                                    
-                                    Escribir "¿Cuál es su número telefónico?";
-                                    
-                                
-                                    leer numeroDeTelefono;
-                                    mientras (numeroDeTelefono = telefono1) O (numeroDeTelefono = telefono2) Hacer
-                                        Escribir "Este numero de telefono ya existe. Por favor ingrese otro:";
-                                        leer numeroDeTelefono;
+                                    Para i <- 1 Hasta 3 Con Paso 1 Hacer
+                                        Escribir "=======================================================";
+                                        Escribir "PARA AGREGAR CONTACTO #", i;
+                                        Escribir "-------------------------------------------------------";
                                         
-                                    FinMientras
-                                    
-                                    
-                                    Si telefono1 = 0 Entonces
-                                        telefono1 <- numeroDeTelefono;
-                                    SiNo
-                                        Si telefono2= 0 Entonces
-                                            telefono2 <- numeroDeTelefono;
+                                        Escribir "Escribe el nombre completo: ";
+                                        Si nombre1 = "" Entonces
+                                            leer nombre1;
                                         SiNo
-                                            si telefono3 = 0 Entonces
-                                                telefono3 <- numeroDeTelefono;
+                                            Si nombre2= "" Entonces
+                                                leer nombre2;
+                                            SiNo
+                                                si nombre3 = "" Entonces
+                                                    Leer nombre3;
+                                                FinSi
                                             FinSi
                                         FinSi
-                                    FinSi
-                                    
-                                    Escribir "¿En que organización podría ubicar a este contacto?";
-                                    
-                                    Si organizacion1 = "" Entonces
-                                        Leer organizacion1;
-                                    SiNo
-                                        Si organizacion2 = "" Entonces
-                                            Leer organizacion2;
+                                        
+                                        Escribir "¿Cuál es su número telefónico?";
+                                        
+                                        leer numeroDeTelefono;
+                                        mientras (numeroDeTelefono = telefono1) O (numeroDeTelefono = telefono2) Hacer
+                                            Escribir "Este numero de telefono ya existe. Por favor ingrese otro:";
+                                            leer numeroDeTelefono;
+                                            
+                                        FinMientras
+                                        Si telefono1 = "" Entonces
+                                            telefono1 <- numeroDeTelefono;
                                         SiNo
-                                            Si organizacion3 = "" Entonces
-                                                Leer organizacion3;
+                                            Si telefono2= "" Entonces
+                                                telefono2 <- numeroDeTelefono;
+                                            SiNo
+                                                si telefono3 = "" Entonces
+                                                    telefono3 <- numeroDeTelefono;
+                                                FinSi
                                             FinSi
                                         FinSi
-                                    FinSi
+                                        
+                                        Escribir "¿En que organización podría ubicar a este contacto?";
+                                        
+                                        Si organizacion1 = "" Entonces
+                                            Leer organizacion1;
+                                        SiNo
+                                            Si organizacion2 = "" Entonces
+                                                Leer organizacion2;
+                                            SiNo
+                                                Si organizacion3 = "" Entonces
+                                                    Leer organizacion3;
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                        
+                                    FinPara
                                     
+                                    Repetir
+                                        Escribir "=======================================================";
+                                        solicitud <- elegir();
+                                        
+                                        Limpiar Pantalla;
+                                        Segun solicitud Hacer
+                                            1:
+                                                opcionDeBusqueda <- comoBuscar();
+                                                Limpiar Pantalla;
+                                                
+                                                Si opcionDeBusqueda = 1 Entonces
+                                                    
+                                                    busquedaNombre <- buscarContacto("nombre");
+                                                    Si busquedaNombre = nombre1 Entonces
+                                                        imprimirContacto(nombre1, telefono1, organizacion1);
+                                                    SiNo
+                                                        Si busquedaNombre = nombre2 Entonces
+                                                            imprimirContacto(nombre2, telefono2, organizacion2);
+                                                        SiNo
+                                                            Si busquedaNombre = nombre2 Entonces
+                                                                imprimirContacto(nombre3, telefono3, organizacion3);
+                                                            SiNo
+                                                                Escribir "Ese nombre NO EXISTE.";
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                SiNo
+                                                    busquedaTelefono <- buscarContacto("número");
+                                                    Si busquedaTelefono = telefono1 Entonces
+                                                        imprimirContacto(nombre1, telefono1, organizacion1);
+                                                    SiNo
+                                                        Si busquedaTelefono = telefono2 Entonces
+                                                            imprimirContacto(nombre2, telefono2, organizacion2);
+                                                        SiNo
+                                                            Si busquedaTelefono = telefono3 Entonces
+                                                                imprimirContacto(nombre3, telefono3, organizacion3);
+                                                            SiNo
+                                                                Escribir "Ese número NO EXISTE.";
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                                
+                                            2:
+                                                Escribir "¿Cuál es el nombre del contacto que deseas eliminar?";
+                                                Leer nombrecontacto;
+                                                
+                                                Limpiar Pantalla;
+                                                
+                                                mientras (nombrecontacto <> nombre1) Y (nombrecontacto <> nombre2) Y (nombrecontacto <> nombre3) Hacer
+                                                    Escribir "Este nombre de contacto no existe en la lista. Por favor ingrese uno que si se encuentre.";
+                                                    leer nombrecontacto;
+                                                    
+                                                FinMientras
+                                                
+                                                Si nombrecontacto = nombre1 Entonces
+                                                    eliminarContacto("1", nombre1, telefono1, organizacion1);
+                                                    nombre1 <- "";
+                                                    telefono1 <- "";
+                                                    organizacion1 <- "";
+                                                SiNo
+                                                    Si nombrecontacto = nombre2 Entonces
+                                                        eliminarContacto("2", nombre2, telefono2, organizacion2);
+                                                        nombre2 <- "";
+                                                        telefono2 <- "";
+                                                        organizacion2 <- "";
+                                                    SiNo
+                                                        eliminarContacto("3", nombre3, telefono3, organizacion3);
+                                                        nombre3 <- "";
+                                                        telefono3 <- "";
+                                                        organizacion3 <- "";
+                                                    FinSi
+                                                FinSi
+                                            3:
+                                                Escribir "¡VUELVA PRONTO!";
+                                            De Otro Modo:
+                                                solictud <- 3;
+                                        FinSegun
+                                        
+                                    Hasta Que solicitud = 3;
                                     
-                                FinPara
-                                
-                                
-                                
-                                Repetir
-                                    
-                                    
-                                    Escribir "=======================================================";
+                                FinProceso
+
+                                SubProceso solicitud <- elegir()
+                                    Definir solicitud Como Entero;
                                     Escribir "¿Que otra solicitud desea procesar?";
                                     Escribir "1. Buscar contactos almacenados";
                                     Escribir "2. Eliminar algún contacto ";
                                     Escribir "3. Salir del sistema";
                                     Leer solicitud;
+                                FinSubProceso
+
+                                SubProceso opcion <- comoBuscar()
+                                    Definir opcion Como Entero;
+                                    Escribir "¿Cómo desea buscar su contacto?";
+                                    Escribir "1. Nombre";
+                                    Escribir "2. Telefono";
+                                    leer opcion;
+                                FinSubProceso
+
+                                SubProceso busqueda <- buscarContacto(contacto)
+                                    Definir busqueda Como Caracter;
+                                    Escribir "Ingrese el ", contacto," del contacto que desea buscar";
+                                    Leer busqueda;
+                                FinSubProceso
+
+                                SubProceso imprimirContacto(nombre, telefono, organizacion)
+                                    Escribir "El contacto que esta buscando es:";
+                                    imprimir_Info_Contacto(nombre, telefono, organizacion);
+                                FinSubProceso
+
+                                SubProceso eliminarContacto(posicion, nombre, telefono, organizacion)
+                                    Escribir "CONTACTO #", posicion;
+                                    imprimir_Info_Contacto(nombre, telefono, organizacion);
+                                    Escribir "-------------------------------------------------------";
+                                    Escribir "HA SIDO ELIMINADO";
+                                FinSubProceso
+
+                                SubProceso imprimir_Info_Contacto(nombre, telefono, organizacion)
+                                    Escribir "-------------------------------------------------------";
+                                    Escribir "Nombre: ", nombre;
+                                    Escribir "Telefono: ", telefono;
+                                    Escribir "Organización: ", organizacion;
                                     
-                                    Limpiar Pantalla;
-                                    
-                                    Segun solicitud Hacer
-                                        1:
-                                            Escribir "¿Cómo desea buscar su contacto?";
-                                            Escribir "1. Nombre";
-                                            Escribir "2. Telefono";
-                                            leer opcionDeBusqueda;
-                                            
-                                            Limpiar Pantalla;
-                                            
-                                            si opcionDeBusqueda = 1 Entonces
-                                                
-                                                Escribir "Ingrese el nombre del contacto que desea buscar";
-                                                Leer busquedaNombre;
-                                                
-                                                si busquedaNombre = nombre1 Entonces
-                                                    Escribir "El contacto que esta buscando es:";
-                                                    Escribir "-------------------------------------------------------";
-                                                    Escribir "Nombre: ", nombre1;
-                                                    Escribir "Telefono: ", telefono1;
-                                                    Escribir "Organización: ", organizacion1;
-                                                sino 
-                                                    si busquedaNombre = nombre2 Entonces
-                                                        Escribir "El contacto que esta buscando es:";
-                                                        Escribir "-------------------------------------------------------";
-                                                        Escribir "Nombre: ", nombre2;
-                                                        Escribir "Telefono: ", telefono2;
-                                                        Escribir "Organización: ", organizacion2;
-                                                    SiNo
-                                                        Si busquedaNombre = nombre3 Entonces
-                                                            Escribir "El contacto que esta buscando es:";
-                                                            Escribir "-------------------------------------------------------";
-                                                            Escribir "Nombre: ", nombre3;
-                                                            Escribir "Telefono: ", telefono3;
-                                                            Escribir "Organización: ", organizacion3;
-                                                        Sino
-                                                            Escribir "Ese nombre NO EXISTE.";
-                                                        FinSi
-                                                    FinSi
-                                                FinSi
-                                            SiNo
-                                                Escribir "Ingrese el numero del contacto que desea buscar";
-                                                Leer busquedaTelefono;
-                                                
-                                                Si busquedaTelefono = telefono1 Entonces
-                                                    Escribir "El contacto que esta buscando es:";
-                                                    Escribir "-------------------------------------------------------";
-                                                    Escribir "Nombre: ", nombre1;
-                                                    Escribir "Telefono: ", telefono1;
-                                                    Escribir "Organización: ", organizacion1;
-                                                SiNo
-                                                    Si busquedaTelefono = telefono2 Entonces
-                                                        Escribir "El contacto que esta buscando es:";
-                                                        Escribir "-------------------------------------------------------";
-                                                        Escribir "Nombre: ", nombre2;
-                                                        Escribir "Telefono: ", telefono2;
-                                                        Escribir "Organización: ", organizacion2;
-                                                    SiNo
-                                                        Si busquedaTelefono = telefono3 Entonces
-                                                            Escribir "El contacto que esta buscando es:";
-                                                            Escribir "-------------------------------------------------------";
-                                                            Escribir "Nombre: ", nombre3;
-                                                            Escribir "Telefono: ", telefono3;
-                                                            Escribir "Organización: ", organizacion3;
-                                                        SiNo
-                                                            Escribir "Ese número NO EXISTE";
-                                                        FinSi
-                                                    FinSi
-                                                FinSi
-                                                
-                                                
-                                            FinSi
-                                        2:
-                                            Escribir "¿Cuál es el nombre del contacto que deseas eliminar?";
-                                            Leer nombrecontacto;
-                                            
-                                            Limpiar Pantalla;
-                                            
-                                            mientras (nombrecontacto <> nombre1) Y (nombrecontacto <> nombre2) Y (nombrecontacto <> nombre3) Hacer
-                                                Escribir "Este nombre de contacto no existe en la lista. Por favor ingrese uno que si se encuentre.";
-                                                leer nombrecontacto;
-                                                
-                                            FinMientras
-                                            
-                                            Si nombrecontacto = nombre1 Entonces
-                                                Escribir "CONTACTO #1";
-                                                Escribir "-------------------------------------------------------";
-                                                Escribir "Nombre: ", nombre1;
-                                                Escribir "Telefono: ", telefono1;
-                                                Escribir "Organización: ", organizacion1;
-                                                Escribir "-------------------------------------------------------";
-                                                Escribir "HA SIDO ELIMINADO";
-                                                nombre1 <- "";
-                                                telefono1 <- 0;
-                                                organizacion1 <- "";
-                                                
-                                            SiNo
-                                                
-                                                Si nombrecontacto = nombre2 Entonces
-                                                    
-                                                    Escribir "CONTACTO #2";
-                                                    Escribir "-------------------------------------------------------";
-                                                    Escribir "Nombre: ", nombre2;
-                                                    Escribir "Telefono: ", telefono2;
-                                                    Escribir "Organización: ", organizacion2;
-                                                    Escribir "-------------------------------------------------------";
-                                                    Escribir "HA SIDO ELIMINADO";
-                                                    nombre2 <- "";
-                                                    telefono2 <- 0;
-                                                    organizacion2 <- "";
-                                                    
-                                                SiNo
-                                                    
-                                                    Si nombrecontacto = nombre3 Entonces
-                                                        
-                                                        Escribir "CONTACTO #3";
-                                                        Escribir "-------------------------------------------------------";
-                                                        Escribir "Nombre: ", nombre3;
-                                                        Escribir "Telefono: ", telefono3;
-                                                        Escribir "Organización: ", organizacion3;
-                                                        Escribir "-------------------------------------------------------";
-                                                        Escribir "HA SIDO ELIMINADO";
-                                                        nombre3 <- "";
-                                                        telefono3 <- 0;
-                                                        organizacion3 <- "";
-                                                        
-                                                    FinSi
-                                                    
-                                                FinSi
-                                                
-                                            FinSi
-                                            
-                                        3:
-                                            
-                                            Escribir "¡VUELVA PRONTO!";
-                                        De Otro Modo:
-                                            solictud <- 3;
-                                    FinSegun
-                                Hasta Que solicitud = 3;
-                                
-                            FinProceso
-                              
+                                FinSubProceso
+
                             </code>
                         </pre>
                     </div>
@@ -524,18 +242,19 @@
             </div>
             <div class="puntoTaller">
                 <li>
-                    <h3>El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y 
-                        requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. 
-                        Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del 
-                        cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción 
-                        de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el 
-                        parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
-                        Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+                    <h3>Punto7<br>
+                        El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio 
+                        y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. 
+                        Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos 
+                        del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la 
+                        opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en 
+                        el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en 
+                        presente que el parqueadero solo puede almacenar máximo 5 vehículos.
                     </h3>
                     <div class="codigo">
                         <pre>
                             <code>
-                            Proceso Punto7_Taller3
+                            Proceso Punto7_Ciclos_Funciones
 	
                                 Definir nombre1, nombre2, nombre3, nombre4, nombre5 Como Caracter;
                                 Definir placa, placa1, placa2, placa3, placa4, placa5 Como Caracter;
@@ -570,17 +289,9 @@
                                 marca5 <- "";
                                 
                                 Repetir
-                                    
                                     Escribir "¡BIENVENIDO AL PARQUEADERO EL GUARDIÁN!";
                                     Escribir "============================================";
-                                    
-                                    Escribir "Indique que solicitud desea realizar";
-                                    Escribir "1. Ingresar Vehiculo";
-                                    Escribir "2. Retirar del parqueadero";
-                                    Escribir "3. Consultar vehículo dentro del parqueadero";
-                                    Escribir "4. Salir";
-                                    
-                                    Leer opcionmenu;
+                                    opcionmenu <- menu();
                                     
                                     Segun opcionmenu Hacer
                                         1:
@@ -721,126 +432,73 @@
                                             masvehiculos <- 1;
                                             
                                         2:
-                                            Escribir "Ingrese la placa del vehiculo que se va a retirar del parqueadero";
-                                            Leer retirarplaca;
-                                            
+                                            retirarplaca <- capturarPlaca("retirar");
                                             Mientras (retirarplaca <> placa1) Y (retirarplaca <> placa2) Y (retirarplaca <> placa3) Y (retirarplaca <> placa4) Y (retirarplaca <> placa5) Hacer
                                                 Escribir "Esa placa nunca se ingreso al parqueadero EL GUARDIÁN";
                                                 Escribir "Por favor escriba una que si haya sido ingresada";
                                                 Leer retirarplaca;
                                             FinMientras
                                             
+                                            Limpiar Pantalla;
+                                            
                                             Si retirarplaca = placa1 Entonces
-                                                Escribir "--------------------------------------------";
-                                                Escribir "Vehiculo ", marca1, " de placa ", placa1;
-                                                Escribir "Propietario: ", nombre1, " con número de contacto ", telefono1;
-                                                Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
-                                                Escribir "============================================";
+                                                retirarVehiculo(marca1, placa1, nombre1, telefono1);
                                                 marca1 <- "";
                                                 placa1 <- "";
                                                 nombre1 <- "";
                                                 telefono1 <- 0;
-                                                
                                             SiNo
                                                 Si retirarplaca = placa2 Entonces
-                                                    Escribir "--------------------------------------------";
-                                                    Escribir "Vehiculo ", marca2, " de placa ", placa2;
-                                                    Escribir "Propietario: ", nombre2, " con número de contacto ", telefono2;
-                                                    Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
-                                                    Escribir "============================================";
+                                                    retirarVehiculo(marca2, placa2, nombre2, telefono2);
                                                     marca2 <- "";
                                                     placa2 <- "";
                                                     nombre2 <- "";
                                                     telefono2 <- 0;
                                                 SiNo
                                                     Si retirarplaca = placa3 Entonces
-                                                        Escribir "--------------------------------------------";
-                                                        Escribir "Vehiculo ", marca3, " de placa ", placa3;
-                                                        Escribir "Propietario: ", nombre3, " con número de contacto ", telefono3;
-                                                        Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
-                                                        Escribir "============================================";
+                                                        retirarVehiculo(marca3, placa3, nombre3, telefono3);
                                                         marca3 <- "";
                                                         placa3 <- "";
                                                         nombre3 <- "";
                                                         telefono3 <- 0;
                                                     SiNo
                                                         Si retirarplaca = placa4 Entonces
-                                                            Escribir "--------------------------------------------";
-                                                            Escribir "Vehiculo ", marca4, " de placa ", placa4;
-                                                            Escribir "Propietario: ", nombre4, " con número de contacto ", telefono4;
-                                                            Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
-                                                            Escribir "============================================";
+                                                            retirarVehiculo(marca4, placa4, nombre4, telefono4);
                                                             marca4 <- "";
                                                             placa4 <- "";
                                                             nombre4 <- "";
                                                             telefono4 <- 0;
                                                         SiNo
                                                             Si retirarplaca = placa5 Entonces
-                                                                Escribir "--------------------------------------------";
-                                                                Escribir "Vehiculo ", marca5, " de placa ", placa5;
-                                                                Escribir "Propietario: ", nombre5, " con número de contacto ", telefono5;
-                                                                Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
-                                                                Escribir "============================================";
+                                                                retirarVehiculo(marca5, placa5, nombre5, telefono5);
                                                                 marca5 <- "";
                                                                 placa5 <- "";
                                                                 nombre5 <- "";
                                                                 telefono5 <- 0;
                                                             FinSi
-                                                            
                                                         FinSi
                                                     FinSi
                                                 FinSi
                                             FinSi
                                             
-                                            
                                         3:
-                                            Escribir "¿Cuál es la placa del vehículo que desea buscar?";
-                                            Leer buscarplaca;
+                                            buscarplaca <- capturarPlaca("buscar");
+                                            Limpiar Pantalla;
                                             
                                             Si buscarplaca = placa1 Entonces
-                                                Escribir "El vehículo buscado es:";
-                                                Escribir "--------------------------------------------";
-                                                Escribir "Marca: ", marca1;
-                                                Escribir "Placa: ", placa1;
-                                                Escribir "Nombre del Propietario: ", nombre1;
-                                                Escribir "Telefono del Propietario: ", telefono1;
-                                                Escribir "============================================";
+                                                imprimirBusqueda(marca1, placa1, nombre1, telefono1);
                                             SiNo
                                                 Si buscarplaca = placa2 Entonces
-                                                    Escribir "El vehículo buscado es:";
-                                                    Escribir "--------------------------------------------";
-                                                    Escribir "Marca: ", marca2;
-                                                    Escribir "Placa: ", placa2;
-                                                    Escribir "Nombre del Propietario: ", nombre2;
-                                                    Escribir "Telefono del Propietario: ", telefono2;
-                                                    Escribir "============================================";
+                                                    imprimirBusqueda(marca2, placa2, nombre2, telefono2);
                                                 SiNo
                                                     Si buscarplaca = placa3 Entonces
-                                                        Escribir "El vehículo buscado es:";
-                                                        Escribir "--------------------------------------------";
-                                                        Escribir "Marca: ", marca3;
-                                                        Escribir "Placa: ", placa3;
-                                                        Escribir "Nombre del Propietario: ", nombre3;
-                                                        Escribir "Telefono del Propietario: ", telefono3;
-                                                        Escribir "============================================";
+                                                        imprimirBusqueda(marca3, placa3, nombre3, telefono3);
                                                     SiNo
                                                         Si buscarplaca = placa4 Entonces
-                                                            Escribir "El vehículo buscado es:";
-                                                            Escribir "--------------------------------------------";
-                                                            Escribir "Marca: ", marca4;
-                                                            Escribir "Placa: ", placa4;
-                                                            Escribir "Nombre del Propietario: ", nombre4;
-                                                            Escribir "Telefono del Propietario: ", telefono4;
-                                                            Escribir "============================================";
+                                                            imprimirBusqueda(marca4, placa4, nombre4, telefono4);
                                                         SiNo
                                                             Si buscarplaca = placa5 Entonces
-                                                                Escribir "El vehículo buscado es:";
-                                                                Escribir "--------------------------------------------";
-                                                                Escribir "Marca: ", marca5;
-                                                                Escribir "Placa: ", placa5;
-                                                                Escribir "Nombre del Propietario: ", nombre5;
-                                                                Escribir "Telefono del Propietario: ", telefono5;
-                                                                Escribir "============================================";
+                                                                imprimirBusqueda(marca5, placa5, nombre5, telefono5);
                                                             SiNo
                                                                 Escribir "Esa placa nunca fue ingresada al parqueadero EL GUARDIÁN";
                                                                 Escribir "============================================";
@@ -854,13 +512,47 @@
                                             opcionmenu <- 4;
                                             Escribir "============================================";
                                             Escribir "Salió del programa. VUELVA PRONTO.";
+                                            
                                     FinSegun
                                     
                                 Hasta Que opcionmenu = 4
                                 
-                                
                             FinProceso
-                             
+                            
+                            SubProceso opcion <- menu()
+                                Definir opcion Como Entero;
+                                Escribir "Indique que solicitud desea realizar";
+                                Escribir "1. Ingresar Vehiculo";
+                                Escribir "2. Retirar del parqueadero";
+                                Escribir "3. Consultar vehículo dentro del parqueadero";
+                                Escribir "4. Salir";
+                                Leer opcion;
+                            FinSubProceso
+                            
+                            SubProceso placaVehiculo <- capturarPlaca(Especificacion)
+                                Definir placaVehiculo Como Caracter;
+                                Escribir "Ingrese la placa del vehiculo que se va a ", Especificacion," en el parqueadero";
+                                Leer placaVehiculo;
+                            FinSubProceso
+                            
+                            SubProceso retirarVehiculo(marca, placa, nombre, telefono)
+                                Escribir "--------------------------------------------";
+                                Escribir "Vehiculo ", marca, " de placa ", placa;
+                                Escribir "Propietario: ", nombre, " con número de contacto ", telefono;
+                                Escribir "VEHÍCULO RETIRADO DEL PARQUEADERO";
+                                Escribir "============================================";
+                            FinSubProceso
+                            
+                            SubProceso imprimirBusqueda(marca, placa, nombre, telefono)
+                                Escribir "El vehículo buscado es:";
+                                Escribir "--------------------------------------------";
+                                Escribir "Marca: ", marca;
+                                Escribir "Placa: ", placa;
+                                Escribir "Nombre del Propietario: ", nombre;
+                                Escribir "Telefono del Propietario: ", telefono;
+                                Escribir "============================================";
+                            FinSubProceso
+                                  
                             </code>
                         </pre>
                     </div>
@@ -868,18 +560,18 @@
             </div>
             <div class="puntoTaller">
                 <li>
-                    <h3>La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los 
-                        cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite 
-                        de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
-                        consultar usuarios que hayan presentado el curso y resultados de la prueba del curso 
-                        (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+                    <h3>Punto 8<br>
+                        La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos 
+                        de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de 
+                        adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+                        consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron 
+                        aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
                         Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
                     </h3>
                     <div class="codigo">
                         <pre>
                             <code>
-                            Proceso Punto8_Taller3
-	
+                            Proceso Punto8_Ciclos_Funciones
 	
                                 Definir opcionmenu Como Entero;
                                 Definir usuarios, masusuarios Como Entero;
@@ -908,6 +600,7 @@
                                 Estado8 <- "";
                                 
                                 Repetir
+                                    
                                     Escribir "==============================================";
                                     Escribir "ESCUELA AUTOMOVILÍSTICA - EL MAESTRO";
                                     Escribir "----------------------------------------------";
@@ -929,12 +622,10 @@
                                                 
                                                 Mientras (usuarios <= 8) Y (masusuarios = 1) Hacer
                                                     
-                                                    Escribir "Ingrese el nombre del usuario";
-                                                    Leer usuario;
+                                                    usuario <- ingresardato("Ingrese el nombre del usuario");
                                                     
                                                     Mientras (usuario = us1) O (usuario = us2) O (usuario = us3) O (usuario = us4) O (usuario = us5) O (usuario = us6) O (usuario = us7) O (usuario = us8) Hacer
-                                                        Escribir "Ese usuario ya se encuentra registrado.";
-                                                        Leer usuario;
+                                                        usuario <- ingresardato("Ese usuario ya se encuentra registrado.");
                                                     FinMientras
                                                     
                                                     Si us1 = "" Entonces
@@ -969,9 +660,8 @@
                                                         FinSi
                                                     FinSi
                                                     
-                                                    Escribir "¿Este usuario aprobó el curso?"; 
                                                     Escribir "Responda SI o NO, según el caso";
-                                                    Leer aprobo;
+                                                    aprobo <- ingresardato("¿Este usuario aprobó el curso?");
                                                     
                                                     Si aprobo = "SI" O aprobo = "si" Entonces
                                                         
@@ -1040,7 +730,6 @@
                                                                 FinSi
                                                             FinSi
                                                         FinSi
-                                                        
                                                     FinSi
                                                     
                                                     usuarios <- usuarios + 1;
@@ -1071,8 +760,7 @@
                                             
                                             masusuarios <- 1;
                                         2:
-                                            Escribir "Escriba el nombre del usuario qeu desea consultar";
-                                            Leer buscarnombre;
+                                            buscarnombre <- ingresardato("Escriba el nombre del usuario qeu desea consultar");
                                             
                                             Si buscarnombre = us1 Entonces
                                                 Escribir "El estudiante ", us1, " tiene ", Estado1;
@@ -1114,23 +802,26 @@
                                     FinSegun
                                     
                                 Hasta Que opcionmenu = 3
+                                
                             FinProceso
-                              
+                            
+                            SubProceso estado <- imprimirEstado_Licencia(estadoAoD)
+                                Definir estado Como Caracter;
+                                Escribir "Estado de la licencia ", estadoAoD;
+                            FinSubProceso
+                            
+                            SubProceso persona <- ingresardato(mensaje)
+                                Definir persona Como Caracter;
+                                Escribir mensaje;
+                                Leer persona;
+                            FinSubProceso
+                                  
                             </code>
                         </pre>
                     </div>
                 </li>
             </div>
-        </ol>
-    </div>
-
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oH63ORPqncg" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+        </ul>
     </div>
 </body>
 </html>
